@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
+		BACA4ABD1CA9574900940EBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABC1CA9574900940EBA /* ViewController.swift */; };
+		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
+		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
+		BACA4AC51CA9574900940EBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC31CA9574900940EBA /* LaunchScreen.storyboard */; };
+		BACA4AD01CA9574A00940EBA /* Yusuke_HozumiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ACF1CA9574A00940EBA /* Yusuke_HozumiTests.swift */; };
+		BACA4ADB1CA9574A00940EBA /* Yusuke_HozumiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BACA4ACC1CA9574900940EBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BACA4AAF1CA9574900940EBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BACA4AB61CA9574900940EBA;
+			remoteInfo = "Yusuke Hozumi";
+		};
+		BACA4AD71CA9574A00940EBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BACA4AAF1CA9574900940EBA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BACA4AB61CA9574900940EBA;
+			remoteInfo = "Yusuke Hozumi";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BACA4ABC1CA9574900940EBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BACA4AC11CA9574900940EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BACA4AC41CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BACA4AC61CA9574900940EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACA4ACB1CA9574900940EBA /* Yusuke HozumiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yusuke HozumiTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACA4ACF1CA9574A00940EBA /* Yusuke_HozumiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yusuke_HozumiTests.swift; sourceTree = "<group>"; };
+		BACA4AD11CA9574A00940EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BACA4AD61CA9574A00940EBA /* Yusuke HozumiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yusuke HozumiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yusuke_HozumiUITests.swift; sourceTree = "<group>"; };
+		BACA4ADC1CA9574A00940EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BACA4AB41CA9574900940EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BACA4AC81CA9574900940EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BACA4AD31CA9574A00940EBA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BACA4AAE1CA9574900940EBA = {
+			isa = PBXGroup;
+			children = (
+				BACA4AB91CA9574900940EBA /* Yusuke Hozumi */,
+				BACA4ACE1CA9574900940EBA /* Yusuke HozumiTests */,
+				BACA4AD91CA9574A00940EBA /* Yusuke HozumiUITests */,
+				BACA4AB81CA9574900940EBA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BACA4AB81CA9574900940EBA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */,
+				BACA4ACB1CA9574900940EBA /* Yusuke HozumiTests.xctest */,
+				BACA4AD61CA9574A00940EBA /* Yusuke HozumiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BACA4AB91CA9574900940EBA /* Yusuke Hozumi */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4ABA1CA9574900940EBA /* AppDelegate.swift */,
+				BACA4ABC1CA9574900940EBA /* ViewController.swift */,
+				BACA4ABE1CA9574900940EBA /* Main.storyboard */,
+				BACA4AC11CA9574900940EBA /* Assets.xcassets */,
+				BACA4AC31CA9574900940EBA /* LaunchScreen.storyboard */,
+				BACA4AC61CA9574900940EBA /* Info.plist */,
+			);
+			path = "Yusuke Hozumi";
+			sourceTree = "<group>";
+		};
+		BACA4ACE1CA9574900940EBA /* Yusuke HozumiTests */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4ACF1CA9574A00940EBA /* Yusuke_HozumiTests.swift */,
+				BACA4AD11CA9574A00940EBA /* Info.plist */,
+			);
+			path = "Yusuke HozumiTests";
+			sourceTree = "<group>";
+		};
+		BACA4AD91CA9574A00940EBA /* Yusuke HozumiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */,
+				BACA4ADC1CA9574A00940EBA /* Info.plist */,
+			);
+			path = "Yusuke HozumiUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BACA4AB61CA9574900940EBA /* Yusuke Hozumi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BACA4ADF1CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke Hozumi" */;
+			buildPhases = (
+				BACA4AB31CA9574900940EBA /* Sources */,
+				BACA4AB41CA9574900940EBA /* Frameworks */,
+				BACA4AB51CA9574900940EBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Yusuke Hozumi";
+			productName = "Yusuke Hozumi";
+			productReference = BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BACA4ACA1CA9574900940EBA /* Yusuke HozumiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BACA4AE21CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke HozumiTests" */;
+			buildPhases = (
+				BACA4AC71CA9574900940EBA /* Sources */,
+				BACA4AC81CA9574900940EBA /* Frameworks */,
+				BACA4AC91CA9574900940EBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BACA4ACD1CA9574900940EBA /* PBXTargetDependency */,
+			);
+			name = "Yusuke HozumiTests";
+			productName = "Yusuke HozumiTests";
+			productReference = BACA4ACB1CA9574900940EBA /* Yusuke HozumiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BACA4AD51CA9574A00940EBA /* Yusuke HozumiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BACA4AE51CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke HozumiUITests" */;
+			buildPhases = (
+				BACA4AD21CA9574A00940EBA /* Sources */,
+				BACA4AD31CA9574A00940EBA /* Frameworks */,
+				BACA4AD41CA9574A00940EBA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BACA4AD81CA9574A00940EBA /* PBXTargetDependency */,
+			);
+			name = "Yusuke HozumiUITests";
+			productName = "Yusuke HozumiUITests";
+			productReference = BACA4AD61CA9574A00940EBA /* Yusuke HozumiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BACA4AAF1CA9574900940EBA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Suke Hozumi";
+				TargetAttributes = {
+					BACA4AB61CA9574900940EBA = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					BACA4ACA1CA9574900940EBA = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = BACA4AB61CA9574900940EBA;
+					};
+					BACA4AD51CA9574A00940EBA = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = BACA4AB61CA9574900940EBA;
+					};
+				};
+			};
+			buildConfigurationList = BACA4AB21CA9574900940EBA /* Build configuration list for PBXProject "Yusuke Hozumi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BACA4AAE1CA9574900940EBA;
+			productRefGroup = BACA4AB81CA9574900940EBA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BACA4AB61CA9574900940EBA /* Yusuke Hozumi */,
+				BACA4ACA1CA9574900940EBA /* Yusuke HozumiTests */,
+				BACA4AD51CA9574A00940EBA /* Yusuke HozumiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BACA4AB51CA9574900940EBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACA4AC51CA9574900940EBA /* LaunchScreen.storyboard in Resources */,
+				BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */,
+				BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BACA4AC91CA9574900940EBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BACA4AD41CA9574A00940EBA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BACA4AB31CA9574900940EBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACA4ABD1CA9574900940EBA /* ViewController.swift in Sources */,
+				BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BACA4AC71CA9574900940EBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACA4AD01CA9574A00940EBA /* Yusuke_HozumiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BACA4AD21CA9574A00940EBA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BACA4ADB1CA9574A00940EBA /* Yusuke_HozumiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BACA4ACD1CA9574900940EBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BACA4AB61CA9574900940EBA /* Yusuke Hozumi */;
+			targetProxy = BACA4ACC1CA9574900940EBA /* PBXContainerItemProxy */;
+		};
+		BACA4AD81CA9574A00940EBA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BACA4AB61CA9574900940EBA /* Yusuke Hozumi */;
+			targetProxy = BACA4AD71CA9574A00940EBA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BACA4ABE1CA9574900940EBA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BACA4ABF1CA9574900940EBA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BACA4AC31CA9574900940EBA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BACA4AC41CA9574900940EBA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BACA4ADD1CA9574A00940EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BACA4ADE1CA9574A00940EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BACA4AE01CA9574A00940EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Yusuke Hozumi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-Hozumi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BACA4AE11CA9574A00940EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Yusuke Hozumi/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-Hozumi";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BACA4AE31CA9574A00940EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Yusuke HozumiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-HozumiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yusuke Hozumi.app/Yusuke Hozumi";
+			};
+			name = Debug;
+		};
+		BACA4AE41CA9574A00940EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Yusuke HozumiTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-HozumiTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yusuke Hozumi.app/Yusuke Hozumi";
+			};
+			name = Release;
+		};
+		BACA4AE61CA9574A00940EBA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Yusuke HozumiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-HozumiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Yusuke Hozumi";
+			};
+			name = Debug;
+		};
+		BACA4AE71CA9574A00940EBA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Yusuke HozumiUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-HozumiUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Yusuke Hozumi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BACA4AB21CA9574900940EBA /* Build configuration list for PBXProject "Yusuke Hozumi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BACA4ADD1CA9574A00940EBA /* Debug */,
+				BACA4ADE1CA9574A00940EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BACA4ADF1CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke Hozumi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BACA4AE01CA9574A00940EBA /* Debug */,
+				BACA4AE11CA9574A00940EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BACA4AE21CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke HozumiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BACA4AE31CA9574A00940EBA /* Debug */,
+				BACA4AE41CA9574A00940EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BACA4AE51CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke HozumiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BACA4AE61CA9574A00940EBA /* Debug */,
+				BACA4AE71CA9574A00940EBA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BACA4AAF1CA9574900940EBA /* Project object */;
+}
