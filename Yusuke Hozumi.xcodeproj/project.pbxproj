@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
-		BACA4ABD1CA9574900940EBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABC1CA9574900940EBA /* ViewController.swift */; };
 		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
 		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
 		BACA4AC51CA9574900940EBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC31CA9574900940EBA /* LaunchScreen.storyboard */; };
 		BACA4AD01CA9574A00940EBA /* Yusuke_HozumiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ACF1CA9574A00940EBA /* Yusuke_HozumiTests.swift */; };
 		BACA4ADB1CA9574A00940EBA /* Yusuke_HozumiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */; };
+		BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B781CA9611800E8FB83 /* BubbleView.swift */; };
+		BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* Begin PBXFileReference section */
 		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BACA4ABC1CA9574900940EBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BACA4AC11CA9574900940EBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BACA4AC41CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +47,8 @@
 		BACA4AD61CA9574A00940EBA /* Yusuke HozumiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Yusuke HozumiUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yusuke_HozumiUITests.swift; sourceTree = "<group>"; };
 		BACA4ADC1CA9574A00940EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BADD0B781CA9611800E8FB83 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
+		BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,11 @@
 		BACA4AB91CA9574900940EBA /* Yusuke Hozumi */ = {
 			isa = PBXGroup;
 			children = (
-				BACA4ABA1CA9574900940EBA /* AppDelegate.swift */,
-				BACA4ABC1CA9574900940EBA /* ViewController.swift */,
 				BACA4ABE1CA9574900940EBA /* Main.storyboard */,
-				BACA4AC11CA9574900940EBA /* Assets.xcassets */,
-				BACA4AC31CA9574900940EBA /* LaunchScreen.storyboard */,
-				BACA4AC61CA9574900940EBA /* Info.plist */,
+				BADD0B731CA9602500E8FB83 /* Model */,
+				BADD0B721CA9602000E8FB83 /* View */,
+				BADD0B741CA9602C00E8FB83 /* View Controller */,
+				BADD0B751CA9604600E8FB83 /* Support */,
 			);
 			path = "Yusuke Hozumi";
 			sourceTree = "<group>";
@@ -123,6 +124,40 @@
 				BACA4ADC1CA9574A00940EBA /* Info.plist */,
 			);
 			path = "Yusuke HozumiUITests";
+			sourceTree = "<group>";
+		};
+		BADD0B721CA9602000E8FB83 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BADD0B781CA9611800E8FB83 /* BubbleView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		BADD0B731CA9602500E8FB83 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		BADD0B741CA9602C00E8FB83 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		BADD0B751CA9604600E8FB83 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BACA4ABA1CA9574900940EBA /* AppDelegate.swift */,
+				BACA4AC11CA9574900940EBA /* Assets.xcassets */,
+				BACA4AC31CA9574900940EBA /* LaunchScreen.storyboard */,
+				BACA4AC61CA9574900940EBA /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +291,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BACA4ABD1CA9574900940EBA /* ViewController.swift in Sources */,
+				BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */,
+				BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */,
 				BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +520,7 @@
 				BACA4AE11CA9574A00940EBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BACA4AE21CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke HozumiTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +529,7 @@
 				BACA4AE41CA9574A00940EBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BACA4AE51CA9574A00940EBA /* Build configuration list for PBXNativeTarget "Yusuke HozumiUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +538,7 @@
 				BACA4AE71CA9574A00940EBA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
