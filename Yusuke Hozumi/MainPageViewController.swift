@@ -10,10 +10,14 @@ import UIKit
 
 class MainPageViewController: UIViewController {
     private var scrollView: UIScrollView!
+    private var animator: UIDynamicAnimator!
     
     override func viewDidLoad() {
         scrollView = UIScrollView(frame: self.view.bounds)
         setUpScrollView(scrollView)
+        
+        animator = UIDynamicAnimator(referenceView: self.view)
+        setUpDynamicAnimator(animator)
         
         let x = scrollView.contentSize.width / 2 - 20
         let y = scrollView.contentSize.height / 2 - 20
@@ -30,8 +34,14 @@ class MainPageViewController: UIViewController {
         scrollView.contentOffset = CGPoint(x: scrollView.contentSize.width / 4, y: scrollView.contentSize.height / 4)
         scrollView.delegate = self
     }
+    
+    private func setUpDynamicAnimator(animator: UIDynamicAnimator) {
+        
+    }
 }
 
 extension MainPageViewController: UIScrollViewDelegate {
-    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print(scrollView.contentOffset)
+    }
 }
