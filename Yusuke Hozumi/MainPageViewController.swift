@@ -11,6 +11,8 @@ import UIKit
 class MainPageViewController: UIViewController {
     private var scrollView: UIScrollView!
     private var animator: UIDynamicAnimator!
+    private var gravityField: UIFieldBehavior!
+    private var gravity: UIGravityBehavior!
     
     override func viewDidLoad() {
         scrollView = UIScrollView(frame: self.view.bounds)
@@ -19,12 +21,30 @@ class MainPageViewController: UIViewController {
         animator = UIDynamicAnimator(referenceView: self.view)
         setUpDynamicAnimator(animator)
         
+        
         let x = scrollView.contentSize.width / 2 - 20
         let y = scrollView.contentSize.height / 2 - 20
-        let bubble = BubbleView(frame: CGRect(x: x, y: y, width: 20, height: 20))
+        let bubble = BubbleView(frame: CGRect(x: x, y: y, width: 60, height: 60))
+        bubble.layer.cornerRadius = bubble.frame.width / 2
         bubble.bubbleViewColor = .redColor()
+        
         scrollView.addSubview(bubble)
+        print("center of the bubble: \(bubble.center)")
         self.view.addSubview(scrollView)
+        
+        gravityField = UIFieldBehavior.radialGravityFieldWithPosition(CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2))
+        gravityField.addItem(bubble)
+        gravityField.strength = 0.5
+        animator.addBehavior(gravityField)
+        
+        let collision = UICollisionBehavior(items: [bubble])
+        collision.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsetsZero)
+        animator.addBehavior(collision)
+        
+        animator.debugEnabled = true
+        
+        animator.delegate = self
+        
     }
     
     private func setUpScrollView(scrollView: UIScrollView) {
@@ -44,4 +64,8 @@ extension MainPageViewController: UIScrollViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         print(scrollView.contentOffset)
     }
+}
+
+extension MainPageViewController: UIDynamicAnimatorDelegate {
+    
 }

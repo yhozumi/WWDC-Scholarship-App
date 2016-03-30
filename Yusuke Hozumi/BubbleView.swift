@@ -20,6 +20,11 @@ class BubbleView: UIView {
             refreshUI()
         }
     }
+
+    override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
+        return .Ellipse
+    }
+    
     
     private func refreshUI() {
         self.backgroundColor = bubbleViewColor
