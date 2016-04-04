@@ -22,22 +22,42 @@ class MainPageViewController: UIViewController {
         setUpDynamicAnimator(animator)
         
         
+        let pastelBlue = UIColor.init(red: 68/255.0, green: 119/255.0, blue: 178/255.0, alpha: 1.0)
         let x = scrollView.contentSize.width / 2 - 20
         let y = scrollView.contentSize.height / 2 - 20
         let bubble = BubbleView(frame: CGRect(x: x, y: y, width: 60, height: 60))
         bubble.layer.cornerRadius = bubble.frame.width / 2
-        bubble.bubbleViewColor = .redColor()
+        bubble.bubbleViewColor = pastelBlue
         
+        let bubble2 = BubbleView(frame: CGRect(x: x, y: y, width: 60, height: 60))
+        bubble2.layer.cornerRadius = bubble.frame.width / 2
+        bubble2.bubbleViewColor = pastelBlue
+        
+        let bubble3 = BubbleView(frame: CGRect(x: x, y: y, width: 60, height: 60))
+        bubble3.layer.cornerRadius = bubble.frame.width / 2
+        bubble3.bubbleViewColor = pastelBlue
+        
+        let bubble4 = BubbleView(frame: CGRect(x: x, y: y, width: 60, height: 60))
+        bubble4.layer.cornerRadius = bubble.frame.width / 2
+        bubble4.bubbleViewColor = pastelBlue
+        
+        scrollView.addSubview(bubble2)
         scrollView.addSubview(bubble)
+        scrollView.addSubview(bubble3)
+        scrollView.addSubview(bubble4)
+        
         print("center of the bubble: \(bubble.center)")
         self.view.addSubview(scrollView)
         
         gravityField = UIFieldBehavior.radialGravityFieldWithPosition(CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2))
         gravityField.addItem(bubble)
+        gravityField.addItem(bubble2)
+        gravityField.addItem(bubble3)
+        gravityField.addItem(bubble4)
         gravityField.strength = 0.5
         animator.addBehavior(gravityField)
         
-        let collision = UICollisionBehavior(items: [bubble])
+        let collision = UICollisionBehavior(items: [bubble, bubble2, bubble3, bubble4])
         collision.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsetsZero)
         animator.addBehavior(collision)
         
