@@ -41,21 +41,33 @@ class MainPageViewController: UIViewController {
         bubble4.layer.cornerRadius = bubble.frame.width / 2
         bubble4.bubbleViewColor = pastelBlue
         
-        scrollView.addSubview(bubble2)
-        scrollView.addSubview(bubble)
-        scrollView.addSubview(bubble3)
-        scrollView.addSubview(bubble4)
+        let bubbles = [bubble, bubble2, bubble3, bubble4]
+        
+        let _ = bubbles.map { scrollView.addSubview($0) }
         
         print("center of the bubble: \(bubble.center)")
         self.view.addSubview(scrollView)
         
-        gravityField = UIFieldBehavior.radialGravityFieldWithPosition(CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2))
-        gravityField.addItem(bubble)
-        gravityField.addItem(bubble2)
-        gravityField.addItem(bubble3)
-        gravityField.addItem(bubble4)
-        gravityField.strength = 0.5
-        animator.addBehavior(gravityField)
+//        gravityField = UIFieldBehavior.radialGravityFieldWithPosition(CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2))
+////        gravityField.addItem(bubble)
+////        gravityField.addItem(bubble2)
+////        gravityField.addItem(bubble3)
+////        gravityField.addItem(bubble4)
+        
+        let _ = bubbles.map {
+            let gravity = UIFieldBehavior.radialGravityFieldWithPosition($0.center)
+            print("center of the bubble view \($0.center)")
+            for bubble in bubbles {
+                if bubble != $0 {
+                    gravity.addItem(bubble)
+                    print("gravity added")
+                }
+            }
+            animator.addBehavior(gravity)
+        }
+        
+        
+        
         
         let collision = UICollisionBehavior(items: [bubble, bubble2, bubble3, bubble4])
         collision.setTranslatesReferenceBoundsIntoBoundaryWithInsets(UIEdgeInsetsZero)

@@ -9,6 +9,7 @@
 import UIKit
 
 class BubbleView: UIView {
+    
     var bubbleViewColor: UIColor? = .redColor() {
         didSet {
             refreshUI()
