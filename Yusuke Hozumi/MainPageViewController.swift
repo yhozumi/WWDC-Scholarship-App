@@ -16,6 +16,11 @@ class MainPageViewController: UIViewController {
         super.viewDidLoad()
         setUpScrollView()
         setUpDynamicAnimator()
+        
+        let rect = CGRect(x: 100, y: 100, width: 100, height: 100)
+        
+        let bubble = BubbleView(frame: rect, color: .redColor(), text: "test")
+        scrollView.addSubview(bubble)
     }
     
     private func setUpDynamicAnimator() {

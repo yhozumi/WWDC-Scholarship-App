@@ -11,12 +11,16 @@ import UIKit
 class BubbleView: UIView {
     private(set) var color: UIColor?
     private(set) var text: String?
-    
 
+    override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
+        return .Ellipse
+    }
+    
     convenience init(frame: CGRect, color: UIColor, text: String) {
         self.init(frame: frame)
         self.color = color
         self.text = text
+        configureBubbleView()
     }
     
     override init(frame: CGRect) {
@@ -25,5 +29,11 @@ class BubbleView: UIView {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    private func configureBubbleView() {
+        self.layer.cornerRadius = self.frame.width / 2
+        self.backgroundColor = color
+        
     }
 }
