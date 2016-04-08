@@ -14,7 +14,8 @@ class MainPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setUpScrollView()
+        setUpDynamicAnimator()
     }
     
     private func setUpDynamicAnimator() {
@@ -23,10 +24,11 @@ class MainPageViewController: UIViewController {
     }
     
     private func setUpScrollView() {
+        scrollView = UIScrollView(frame: self.view.bounds)
         scrollView.contentSize = CGSize(width: self.view.bounds.width * 1.5, height: self.view.bounds.height)
-        
+        scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         scrollView.delegate = self
-        
+        view.addSubview(scrollView)
     }
 }
 
