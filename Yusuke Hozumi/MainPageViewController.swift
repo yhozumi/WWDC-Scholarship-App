@@ -17,20 +17,36 @@ class MainPageViewController: UIViewController {
         setUpScrollView()
         setUpDynamicAnimator()
         
+        animator.debugEnabled = true
+        
         let rect = CGRect(x: 100, y: 100, width: 100, height: 100)
         
         let bubble = BubbleView(frame: rect, color: .redColor(), text: "test")
+        
         scrollView.addSubview(bubble)
+        let gravity = configureGravityField([bubble])
+        animator.addBehavior(gravity)
+        
+        
     }
     
     private func setUpDynamicAnimator() {
-        animator = UIDynamicAnimator(referenceView: self.view)
+        animator = UIDynamicAnimator(referenceView: self.scrollView)
         animator.delegate = self
+    }
+    
+    private func configureGravityField(viewsToAdd: [UIView]) -> UIFieldBehavior {
+        let scrollViewCenter = CGPoint(x: scrollView.contentSize.width / 2, y: scrollView.contentSize.height / 2)
+        let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
+        gravity.strength = 0.5
+        let _ = viewsToAdd.map { gravity.addItem($0) }
+        return gravity
     }
     
     private func setUpScrollView() {
         scrollView = UIScrollView(frame: self.view.bounds)
         scrollView.contentSize = CGSize(width: self.view.bounds.width * 1.5, height: self.view.bounds.height)
+        print(scrollView.center)
         scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         scrollView.delegate = self
         view.addSubview(scrollView)
