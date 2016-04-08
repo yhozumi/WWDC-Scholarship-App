@@ -10,25 +10,4 @@ import UIKit
 
 class BubbleView: UIView {
     
-    var bubbleViewColor: UIColor? = .redColor() {
-        didSet {
-            refreshUI()
-        }
-    }
-    
-    var bubbleViewRadius: CGFloat? {
-        didSet {
-            refreshUI()
-        }
-    }
-
-    override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
-        return .Ellipse
-    }
-    
-    
-    private func refreshUI() {
-        self.backgroundColor = bubbleViewColor
-        self.setNeedsDisplay()
-    }
 }
