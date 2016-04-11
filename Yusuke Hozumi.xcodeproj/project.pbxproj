@@ -15,7 +15,6 @@
 		BACA4ADB1CA9574A00940EBA /* Yusuke_HozumiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */; };
 		BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B781CA9611800E8FB83 /* BubbleView.swift */; };
 		BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */; };
-		BAF60A4B1CBB26D2002B96C2 /* InvisibleRoundCollisionBound.swft.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF60A4A1CBB26D2002B96C2 /* InvisibleRoundCollisionBound.swft.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +50,6 @@
 		BACA4ADC1CA9574A00940EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADD0B781CA9611800E8FB83 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		BAF60A4A1CBB26D2002B96C2 /* InvisibleRoundCollisionBound.swft.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvisibleRoundCollisionBound.swft.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +131,6 @@
 			isa = PBXGroup;
 			children = (
 				BADD0B781CA9611800E8FB83 /* BubbleView.swift */,
-				BAF60A4A1CBB26D2002B96C2 /* InvisibleRoundCollisionBound.swft.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -297,7 +294,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */,
-				BAF60A4B1CBB26D2002B96C2 /* InvisibleRoundCollisionBound.swft.swift in Sources */,
 				BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */,
 				BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */,
 			);

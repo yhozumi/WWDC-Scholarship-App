@@ -22,16 +22,27 @@ class MainPageViewController: UIViewController {
         setUpDynamicAnimator()
         
         
-        
         // -- TEST Code
         animator.debugEnabled = true
         let rect = CGRect(x: 100, y: 100, width: 100, height: 100)
         
         let bubble = BubbleView(frame: rect, color: .redColor(), text: "test")
+        let bubble1 = BubbleView(frame: rect, color: .redColor(), text: "test")
+        let bubble2 = BubbleView(frame: rect, color: .redColor(), text: "test")
+        let bubble3 = BubbleView(frame: rect, color: .redColor(), text: "test")
+        let bubble4 = BubbleView(frame: rect, color: .redColor(), text: "test")
+        let bubble5 = BubbleView(frame: rect, color: .redColor(), text: "test")
+        let bubble6 = BubbleView(frame: rect, color: .redColor(), text: "test")
+        let bubble7 = BubbleView(frame: rect, color: .redColor(), text: "test")
         
-        scrollView.addSubview(bubble)
-        let gravity = configureGravityField([bubble], center: scrollViewCenter)
-        animator.addBehavior(gravity)
+        let bubbles = [bubble, bubble1, bubble2, bubble3, bubble4, bubble5, bubble6, bubble7]
+        
+        let _ = bubbles.map { scrollView.addSubview($0) }
+        
+        configureGravityField(bubbles, center: scrollViewCenter)
+        configureBoundaryWithSize(CGSize(width: 50, height: 50), center: CGPoint(x: scrollViewCenter.x - 25, y: scrollViewCenter.y - 25), views: bubbles)
+        
+        
         // -- End TEST Code
         
     }
@@ -41,17 +52,18 @@ class MainPageViewController: UIViewController {
         animator.delegate = self
     }
     
-    private func configureGravityField(viewsToAdd: [UIView], center: CGPoint) -> UIFieldBehavior {
+    private func configureGravityField(viewsToAdd: [UIView], center: CGPoint) {
         print("scrollView center: \(scrollViewCenter)")
         let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
         gravity.strength = 0.5
         let _ = viewsToAdd.map { gravity.addItem($0) }
-        return gravity
+        animator.addBehavior(gravity)
     }
     
-    private func configureBoundaryWithSize(size: CGSize, center: CGPoint) {
-        let invisibleBound = InvisibleRoundCollisionBound(frame: CGRect(origin: center, size: size))
-        
+    private func configureBoundaryWithSize(size: CGSize, center: CGPoint, views: [UIView]) {
+        let collision = UICollisionBehavior(items: views)
+        collision.addBoundaryWithIdentifier("center boundary", forPath: UIBezierPath(ovalInRect: CGRect(origin: center, size: size)))
+        animator.addBehavior(collision)
     }
     
     private func setUpScrollView() {
