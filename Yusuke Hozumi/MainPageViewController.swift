@@ -12,21 +12,27 @@ class MainPageViewController: UIViewController {
     private var scrollView: UIScrollView!
     private var animator: UIDynamicAnimator!
     
+    private var scrollViewCenter: CGPoint {
+        return CGPoint(x: scrollView.contentSize.width / 2, y: scrollView.contentSize.height / 2)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpScrollView()
         setUpDynamicAnimator()
         
-        animator.debugEnabled = true
         
+        
+        // -- TEST Code
+        animator.debugEnabled = true
         let rect = CGRect(x: 100, y: 100, width: 100, height: 100)
         
         let bubble = BubbleView(frame: rect, color: .redColor(), text: "test")
         
         scrollView.addSubview(bubble)
-        let gravity = configureGravityField([bubble])
+        let gravity = configureGravityField([bubble], center: scrollViewCenter)
         animator.addBehavior(gravity)
-        
+        // -- End TEST Code
         
     }
     
@@ -35,8 +41,7 @@ class MainPageViewController: UIViewController {
         animator.delegate = self
     }
     
-    private func configureGravityField(viewsToAdd: [UIView]) -> UIFieldBehavior {
-        let scrollViewCenter = CGPoint(x: scrollView.contentSize.width / 2, y: scrollView.contentSize.height / 2)
+    private func configureGravityField(viewsToAdd: [UIView], center: CGPoint) -> UIFieldBehavior {
         print("scrollView center: \(scrollViewCenter)")
         let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
         gravity.strength = 0.5
@@ -44,7 +49,8 @@ class MainPageViewController: UIViewController {
         return gravity
     }
     
-    private func configureBoundaryWith(size: CGSize) {
+    private func configureBoundaryWithSize(size: CGSize, center: CGPoint) {
+        let invisibleBound = InvisibleRoundCollisionBound(frame: CGRect(origin: center, size: size))
         
     }
     
