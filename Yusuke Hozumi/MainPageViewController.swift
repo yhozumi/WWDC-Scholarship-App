@@ -37,10 +37,15 @@ class MainPageViewController: UIViewController {
     
     private func configureGravityField(viewsToAdd: [UIView]) -> UIFieldBehavior {
         let scrollViewCenter = CGPoint(x: scrollView.contentSize.width / 2, y: scrollView.contentSize.height / 2)
+        print("scrollView center: \(scrollViewCenter)")
         let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
         gravity.strength = 0.5
         let _ = viewsToAdd.map { gravity.addItem($0) }
         return gravity
+    }
+    
+    private func configureBoundaryWith(size: CGSize) {
+        
     }
     
     private func setUpScrollView() {
@@ -51,6 +56,12 @@ class MainPageViewController: UIViewController {
         scrollView.delegate = self
         view.addSubview(scrollView)
     }
+    
+    override func viewWillLayoutSubviews() {
+        print(scrollView.contentOffset.x)
+        print(scrollView.contentSize.width)
+        
+    }
 }
 
 extension MainPageViewController: UIDynamicAnimatorDelegate {
@@ -58,5 +69,5 @@ extension MainPageViewController: UIDynamicAnimatorDelegate {
 }
 
 extension MainPageViewController: UIScrollViewDelegate {
-    
+
 }
