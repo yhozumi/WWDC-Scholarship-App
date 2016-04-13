@@ -8,7 +8,12 @@
 
 import UIKit
 
+protocol BubbleViewDelegate: class {
+    func bubbleViewDidPress()
+}
+
 class BubbleView: UIView {
+    private var label: UILabel!
     private(set) var color: UIColor?
     private(set) var text: String?
 
@@ -31,9 +36,18 @@ class BubbleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    private func configureLabel() {
+        label = UILabel()
+        label.text = text
+        label.sizeToFit()
+        label.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.width / 2)
+        label.textColor = .whiteColor()
+        addSubview(label)
+    }
+    
     private func configureBubbleView() {
         self.layer.cornerRadius = self.frame.width / 2
         self.backgroundColor = color
-        
+        configureLabel()
     }
 }
