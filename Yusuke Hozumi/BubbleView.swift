@@ -16,6 +16,8 @@ class BubbleView: UIView {
     private var label: UILabel!
     private(set) var color: UIColor?
     private(set) var text: String?
+    
+    weak var delegate: BubbleViewDelegate?
 
     override var collisionBoundsType: UIDynamicItemCollisionBoundsType {
         return .Ellipse
@@ -45,9 +47,17 @@ class BubbleView: UIView {
         addSubview(label)
     }
     
+    
     private func configureBubbleView() {
         self.layer.cornerRadius = self.frame.width / 2
         self.backgroundColor = color
         configureLabel()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(BubbleView.bubbleTapped(_:)))
+        self.addGestureRecognizer(tap)
+    }
+    
+    func bubbleTapped(tap: UITapGestureRecognizer) {
+        delegate?.bubbleViewDidPress()
     }
 }

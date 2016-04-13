@@ -8,7 +8,7 @@
 
 import UIKit
 
-let pastelRed = UIColor(red: 253.0/255.0, green: 49.0/255.0, blue: 89.0/255.0, alpha: 1.0)
+let pastelRed = UIColor(red: 194.0/255.0, green: 59.0/255.0, blue: 34.0/255.0, alpha: 1.0)
 
 class MainPageViewController: UIViewController {
     private var scrollView: UIScrollView!
@@ -16,6 +16,10 @@ class MainPageViewController: UIViewController {
     
     private var scrollViewCenter: CGPoint {
         return CGPoint(x: scrollView.contentSize.width / 2, y: scrollView.contentSize.height / 2)
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
     }
     
     override func viewDidLoad() {
@@ -39,13 +43,19 @@ class MainPageViewController: UIViewController {
         
         let bubbles = [bubble, bubble1, bubble2, bubble3, bubble4, bubble5, bubble6, bubble7]
         
+        // -- End TEST Code
+        
+        
         let _ = bubbles.map { scrollView.addSubview($0) }
+        let _ = bubbles.map { $0.delegate = self }
+        let _ = bubbles.map { $0.alpha = 0.0 }
         
         configureGravityField(bubbles, center: scrollViewCenter)
         configureBoundaryWithSize(CGSize(width: 50, height: 50),
                                   center: CGPoint(x: scrollViewCenter.x - 25, y: scrollViewCenter.y - 25),
                                   views: bubbles)
         allowRotationOnViews(bubbles, allowRotation: false)
+        
     }
     
     private func setUpDynamicAnimator() {
@@ -65,6 +75,7 @@ class MainPageViewController: UIViewController {
         let collision = UICollisionBehavior(items: views)
         collision.addBoundaryWithIdentifier("center boundary",
                                             forPath: UIBezierPath(ovalInRect: CGRect(origin: center, size: size)))
+        collision.collisionDelegate = self
         animator.addBehavior(collision)
     }
     
@@ -84,6 +95,13 @@ class MainPageViewController: UIViewController {
     }
     
     override func viewWillLayoutSubviews() {
+        scrollView.contentOffset.x = scrollViewCenter.x - self.view.bounds.width / 2
+    }
+}
+
+extension MainPageViewController: BubbleViewDelegate {
+    func bubbleViewDidPress() {
+        print("bubbleView tapped:")
     }
 }
 
@@ -93,4 +111,13 @@ extension MainPageViewController: UIDynamicAnimatorDelegate {
 
 extension MainPageViewController: UIScrollViewDelegate {
 
+}
+
+extension MainPageViewController: UICollisionBehaviorDelegate {
+    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, atPoint p: CGPoint) {
+        UIView.animateWithDuration(0.4, animations: { _ in
+            guard let item = item as? UIView else { return }
+            item.alpha = 1.0
+        })
+    }
 }
