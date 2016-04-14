@@ -24,7 +24,7 @@ class MainPageViewController: UIViewController {
     private let texts: [String] = [
         "Timeline",
         "About Me",
-        "Contat",
+        "Contact",
         "Projects",
         "Photos"
     ]
@@ -43,8 +43,8 @@ class MainPageViewController: UIViewController {
         setUpBubbleViews()
         
         configureGravityField(bubbles, center: scrollViewCenter)
-        configureBoundaryWithSize(CGSize(width: 50, height: 50),
-                                  center: CGPoint(x: scrollViewCenter.x - 25, y: scrollViewCenter.y - 25),
+        configureBoundaryWithSize(CGSize(width: 25, height: 25),
+                                  center: CGPoint(x: scrollViewCenter.x - 12.5, y: scrollViewCenter.y - 12.5),
                                   views: bubbles)
         allowRotationOnViews(bubbles, allowRotation: false)
         

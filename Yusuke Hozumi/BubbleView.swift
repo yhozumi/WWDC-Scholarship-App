@@ -47,7 +47,6 @@ class BubbleView: UIView {
         addSubview(label)
     }
     
-    
     private func configureBubbleView() {
         self.layer.cornerRadius = self.frame.width / 2
         self.backgroundColor = color
