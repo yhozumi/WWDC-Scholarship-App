@@ -18,6 +18,17 @@ class MainPageViewController: UIViewController {
         return CGPoint(x: scrollView.contentSize.width / 2, y: scrollView.contentSize.height / 2)
     }
     
+    private var bubbles: [BubbleView] = []
+    
+    //Create an Enum or Structs with these later
+    private let texts: [String] = [
+        "Timeline",
+        "About Me",
+        "Contat",
+        "Projects",
+        "Photos"
+    ]
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
@@ -27,28 +38,9 @@ class MainPageViewController: UIViewController {
         setUpScrollView()
         setUpDynamicAnimator()
         
+        animator.debugEnabled = true
         
-        // -- TEST Code
-        animator.debugEnabled = false
-        let rect = CGRect(x: 100, y: 100, width: 100, height: 100)
-        
-        let bubble = BubbleView(frame: rect, color: pastelRed, text: "test")
-        let bubble1 = BubbleView(frame: rect, color: pastelRed, text: "test")
-        let bubble2 = BubbleView(frame: rect, color: pastelRed, text: "test")
-        let bubble3 = BubbleView(frame: rect, color: pastelRed, text: "test")
-        let bubble4 = BubbleView(frame: rect, color: pastelRed, text: "test")
-        let bubble5 = BubbleView(frame: rect, color: pastelRed, text: "test")
-        let bubble6 = BubbleView(frame: rect, color: pastelRed, text: "test")
-        let bubble7 = BubbleView(frame: rect, color: pastelRed, text: "test")
-        
-        let bubbles = [bubble, bubble1, bubble2, bubble3, bubble4, bubble5, bubble6, bubble7]
-        
-        // -- End TEST Code
-        
-        
-        let _ = bubbles.map { scrollView.addSubview($0) }
-        let _ = bubbles.map { $0.delegate = self }
-        let _ = bubbles.map { $0.alpha = 0.0 }
+        setUpBubbleViews()
         
         configureGravityField(bubbles, center: scrollViewCenter)
         configureBoundaryWithSize(CGSize(width: 50, height: 50),
@@ -56,6 +48,15 @@ class MainPageViewController: UIViewController {
                                   views: bubbles)
         allowRotationOnViews(bubbles, allowRotation: false)
         
+    }
+    
+    private func setUpBubbleViews() {
+        let rect = CGRect(x: scrollViewCenter.x, y: 100, width: 125, height: 125)
+        let _ = texts.map { bubbles.append(BubbleView(frame: rect, color: pastelRed, text: $0)) }
+        let _ = bubbles.map { scrollView.addSubview($0)
+            $0.delegate = self
+            $0.alpha = 0.0
+        }
     }
     
     private func setUpDynamicAnimator() {
@@ -67,6 +68,7 @@ class MainPageViewController: UIViewController {
         print("scrollView center: \(scrollViewCenter)")
         let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
         gravity.strength = 1.0
+        gravity.minimumRadius = 1.0
         let _ = viewsToAdd.map { gravity.addItem($0) }
         animator.addBehavior(gravity)
     }
@@ -100,8 +102,11 @@ class MainPageViewController: UIViewController {
 }
 
 extension MainPageViewController: BubbleViewDelegate {
-    func bubbleViewDidPress() {
-        print("bubbleView tapped:")
+    //Most Likely break in the future, -- Find a better way --
+    func bubbleViewPressed(name: String) {
+        let viewController = storyboard?.instantiateViewControllerWithIdentifier(name)
+        self.navigationController!.pushViewController(viewController!, animated: true)
+        print("\(name) instantiated")
     }
 }
 
@@ -110,7 +115,7 @@ extension MainPageViewController: UIDynamicAnimatorDelegate {
 }
 
 extension MainPageViewController: UIScrollViewDelegate {
-
+    
 }
 
 extension MainPageViewController: UICollisionBehaviorDelegate {

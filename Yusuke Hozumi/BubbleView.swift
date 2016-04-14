@@ -9,7 +9,7 @@
 import UIKit
 
 protocol BubbleViewDelegate: class {
-    func bubbleViewDidPress()
+    func bubbleViewPressed(name: String)
 }
 
 class BubbleView: UIView {
@@ -58,6 +58,6 @@ class BubbleView: UIView {
     }
     
     func bubbleTapped(tap: UITapGestureRecognizer) {
-        delegate?.bubbleViewDidPress()
+        delegate?.bubbleViewPressed(self.text!)
     }
 }
