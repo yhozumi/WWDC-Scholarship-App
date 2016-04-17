@@ -8,11 +8,12 @@
 
 import UIKit
 
-let pastelRed = UIColor(red: 194.0/255.0, green: 59.0/255.0, blue: 34.0/255.0, alpha: 1.0)
+let pastelRed = UIColor(red: 253.0/255.0, green: 49.0/255.0, blue: 89.0/255.0, alpha: 1.0)
 
 class MainPageViewController: UIViewController {
     private var scrollView: UIScrollView!
     private var animator: UIDynamicAnimator!
+    @IBOutlet weak var helloLabel: UILabel!
     
     private var scrollViewCenter: CGPoint {
         return CGPoint(x: scrollView.contentSize.width / 2, y: scrollView.contentSize.height / 2)
@@ -26,19 +27,16 @@ class MainPageViewController: UIViewController {
         "About Me",
         "Contact",
         "Projects",
-        "Photos"
+        "Photos",
+        "Schedule"
     ]
-    
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpScrollView()
         setUpDynamicAnimator()
         
-        animator.debugEnabled = true
+        animator.debugEnabled = false
         
         setUpBubbleViews()
         
@@ -51,7 +49,7 @@ class MainPageViewController: UIViewController {
     }
     
     private func setUpBubbleViews() {
-        let rect = CGRect(x: scrollViewCenter.x, y: 100, width: 125, height: 125)
+        let rect = CGRect(x: scrollViewCenter.x, y: 150, width: 115, height: 115)
         let _ = texts.map { bubbles.append(BubbleView(frame: rect, color: pastelRed, text: $0)) }
         let _ = bubbles.map { scrollView.addSubview($0)
             $0.delegate = self
@@ -59,11 +57,14 @@ class MainPageViewController: UIViewController {
         }
     }
     
+    //Dynamic Animator
     private func setUpDynamicAnimator() {
         animator = UIDynamicAnimator(referenceView: self.scrollView)
         animator.delegate = self
     }
     
+    
+    //Dynamic Animator
     private func configureGravityField(viewsToAdd: [UIView], center: CGPoint) {
         print("scrollView center: \(scrollViewCenter)")
         let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
@@ -73,17 +74,22 @@ class MainPageViewController: UIViewController {
         animator.addBehavior(gravity)
     }
     
+    //Dynamic Animator
     private func configureBoundaryWithSize(size: CGSize, center: CGPoint, views: [UIView]) {
         let collision = UICollisionBehavior(items: views)
         collision.addBoundaryWithIdentifier("center boundary",
                                             forPath: UIBezierPath(ovalInRect: CGRect(origin: center, size: size)))
+        collision.addBoundaryWithIdentifier("Label Boundary", forPath: UIBezierPath(rect: helloLabel.frame))
         collision.collisionDelegate = self
         animator.addBehavior(collision)
     }
     
+    
+    //Dynamic Animator
     private func allowRotationOnViews(views: [UIView], allowRotation: Bool) {
         let itemBehavior = UIDynamicItemBehavior(items: views)
         itemBehavior.allowsRotation = allowRotation
+        itemBehavior.elasticity = 0.3
         animator.addBehavior(itemBehavior)
     }
     
@@ -99,6 +105,10 @@ class MainPageViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         scrollView.contentOffset.x = scrollViewCenter.x - self.view.bounds.width / 2
     }
+}
+
+extension MainPageViewController {
+
 }
 
 extension MainPageViewController: BubbleViewDelegate {
