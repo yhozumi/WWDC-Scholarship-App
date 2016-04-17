@@ -8,18 +8,11 @@
 
 import UIKit
 
-protocol MainPageScrollViewDelegate: class {
-    var scrollViewContentSize: CGSize { get }
-    
-}
-
 class MainPageScrollView: UIScrollView {
    
     private var animator: UIDynamicAnimator!
     private var gravity: UIFieldBehavior!
     private var collision: UICollisionBehavior!
-    
-    weak var dataSource: MainPageScrollViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
