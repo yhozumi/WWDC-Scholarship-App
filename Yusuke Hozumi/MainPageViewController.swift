@@ -15,25 +15,25 @@ class MainPageViewController: UIViewController {
     private var animator: UIDynamicAnimator!
     @IBOutlet weak var helloLabel: UILabel!
     
-    //Create an Enum or Structs with these later
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpScrollView()
         
     }
     
-    
-        
     private func setUpScrollView() {
         scrollView = MainPageScrollView(frame: self.view.bounds)
         scrollView.contentSize = CGSize(width: self.view.bounds.width * 1.5, height: self.view.bounds.height)
+        scrollView.backgroundColor = UIColor.clearColor()
         print(scrollView.center)
         scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         scrollView.delegate = self
+        let _ = scrollView.bubbles.map { $0.delegate = self }
         view.addSubview(scrollView)
     }
     
+    override func viewDidLayoutSubviews() {
+    }
 }
 
 extension MainPageViewController {
@@ -41,7 +41,7 @@ extension MainPageViewController {
 }
 
 extension MainPageViewController: BubbleViewDelegate {
-    //Most Likely break in the future, -- Find a better way --
+    //Most Likely to break in the future, -- Find a better way --
     func bubbleViewPressed(name: String) {
         let viewController = storyboard?.instantiateViewControllerWithIdentifier(name)
         self.navigationController!.pushViewController(viewController!, animated: true)

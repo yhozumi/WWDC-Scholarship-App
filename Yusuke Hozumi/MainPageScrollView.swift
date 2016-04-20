@@ -14,7 +14,7 @@ class MainPageScrollView: UIScrollView {
     private var gravity: UIFieldBehavior!
     private var collision: UICollisionBehavior!
     
-    private var bubbles: [BubbleView] = []
+    private(set) var bubbles: [BubbleView] = []
     
     private let texts: [String] = [
         "Timeline",
@@ -33,23 +33,33 @@ class MainPageScrollView: UIScrollView {
         super.init(frame: frame)
         
         setUpDynamicAnimator()
+        animator.debugEnabled = true
         setUpBubbleViews()
-        
+        allowRotationOnViews(bubbles, allowRotation: false)
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
     
-    //Dynamic Animator
+    override func drawRect(rect: CGRect) {
+        super.drawRect(rect)
+        let centerCollisionWidth: CGFloat = 25.0
+        let collisionCenter = CGPoint(x: scrollViewCenter.x - centerCollisionWidth / 2, y: scrollViewCenter.y - centerCollisionWidth / 2)
+        configureGravityField(bubbles, center: scrollViewCenter)
+        configureBoundaryWithSize(CGSize(width: centerCollisionWidth, height: centerCollisionWidth), center: collisionCenter, views: bubbles)
+    }
+    
+    
     private func setUpDynamicAnimator() {
         animator = UIDynamicAnimator(referenceView: self)
         animator.delegate = self
     }
     
-    
-    //Dynamic Animator
     private func configureGravityField(viewsToAdd: [UIView], center: CGPoint) {
         print("scrollView center: \(scrollViewCenter)")
         let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
@@ -59,18 +69,14 @@ class MainPageScrollView: UIScrollView {
         animator.addBehavior(gravity)
     }
     
-    //Dynamic Animator
     private func configureBoundaryWithSize(size: CGSize, center: CGPoint, views: [UIView]) {
         let collision = UICollisionBehavior(items: views)
         collision.addBoundaryWithIdentifier("center boundary",
                                             forPath: UIBezierPath(ovalInRect: CGRect(origin: center, size: size)))
-        //collision.addBoundaryWithIdentifier("Label Boundary", forPath: UIBezierPath(rect: helloLabel.frame))
         collision.collisionDelegate = self
         animator.addBehavior(collision)
     }
     
-    
-    //Dynamic Animator
     private func allowRotationOnViews(views: [UIView], allowRotation: Bool) {
         let itemBehavior = UIDynamicItemBehavior(items: views)
         itemBehavior.allowsRotation = allowRotation
@@ -100,3 +106,5 @@ extension MainPageScrollView: UICollisionBehaviorDelegate {
         })
     }
 }
+
+
