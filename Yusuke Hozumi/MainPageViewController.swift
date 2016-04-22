@@ -18,7 +18,7 @@ class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpScrollView()
-        
+        showHelloLabel()
     }
     
     //setting up custom scrollView class that has Dynamic Animator in it.
@@ -49,8 +49,8 @@ class MainPageViewController: UIViewController {
 extension MainPageViewController: BubbleViewDelegate {
     //Most Likely to break in the future, -- Find a better way --
     func bubbleViewPressed(name: String) {
-        let viewController = storyboard?.instantiateViewControllerWithIdentifier(name)
-        self.navigationController!.pushViewController(viewController!, animated: true)
+        guard let viewController = storyboard?.instantiateViewControllerWithIdentifier(name) else { return }
+        self.navigationController!.pushViewController(viewController, animated: true)
         print("\(name) instantiated")
     }
 }
