@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02A83F1CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift */; };
+		BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02A8411CC9BF0E00E19CD9 /* TimelineCell.swift */; };
 		BA2910FA1CC040090063FE21 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2910F91CC040090063FE21 /* ContactViewController.swift */; };
 		BA2910FC1CC040120063FE21 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2910FB1CC040120063FE21 /* ProjectsViewController.swift */; };
 		BA2910FE1CC0401C0063FE21 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2910FD1CC0401C0063FE21 /* PhotosViewController.swift */; };
@@ -20,7 +22,6 @@
 		BACA4ADB1CA9574A00940EBA /* Yusuke_HozumiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */; };
 		BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B781CA9611800E8FB83 /* BubbleView.swift */; };
 		BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */; };
-		BAF60A4D1CBF3B48002B96C2 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF60A4C1CBF3B48002B96C2 /* TimelineViewController.swift */; };
 		BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BA02A83F1CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCollectionViewController.swift; sourceTree = "<group>"; };
+		BA02A8411CC9BF0E00E19CD9 /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		BA2910F91CC040090063FE21 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		BA2910FB1CC040120063FE21 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		BA2910FD1CC0401C0063FE21 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
@@ -62,7 +65,6 @@
 		BACA4ADC1CA9574A00940EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADD0B781CA9611800E8FB83 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		BAF60A4C1CBF3B48002B96C2 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
 		BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BA02A83D1CC9BD1A00E19CD9 /* Main Page */ = {
+			isa = PBXGroup;
+			children = (
+				BADD0B781CA9611800E8FB83 /* BubbleView.swift */,
+				BA2911051CC3DE3E0063FE21 /* MainPageScrollView.swift */,
+			);
+			name = "Main Page";
+			sourceTree = "<group>";
+		};
+		BA02A83E1CC9BD2C00E19CD9 /* Timeline */ = {
+			isa = PBXGroup;
+			children = (
+				BA02A8411CC9BF0E00E19CD9 /* TimelineCell.swift */,
+			);
+			name = Timeline;
+			sourceTree = "<group>";
+		};
 		BACA4AAE1CA9574900940EBA = {
 			isa = PBXGroup;
 			children = (
@@ -144,8 +163,8 @@
 		BADD0B721CA9602000E8FB83 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				BADD0B781CA9611800E8FB83 /* BubbleView.swift */,
-				BA2911051CC3DE3E0063FE21 /* MainPageScrollView.swift */,
+				BA02A83D1CC9BD1A00E19CD9 /* Main Page */,
+				BA02A83E1CC9BD2C00E19CD9 /* Timeline */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -161,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */,
-				BAF60A4C1CBF3B48002B96C2 /* TimelineViewController.swift */,
+				BA02A83F1CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift */,
 				BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */,
 				BA2910F91CC040090063FE21 /* ContactViewController.swift */,
 				BA2910FB1CC040120063FE21 /* ProjectsViewController.swift */,
@@ -251,6 +270,7 @@
 				TargetAttributes = {
 					BACA4AB61CA9574900940EBA = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = ZKPYBX98NE;
 					};
 					BACA4ACA1CA9574900940EBA = {
 						CreatedOnToolsVersion = 7.3;
@@ -317,8 +337,9 @@
 				BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */,
 				BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */,
 				BA2910FE1CC0401C0063FE21 /* PhotosViewController.swift in Sources */,
+				BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */,
 				BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */,
-				BAF60A4D1CBF3B48002B96C2 /* TimelineViewController.swift in Sources */,
+				BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */,
 				BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */,
 				BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */,
 				BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */,
@@ -467,10 +488,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Yusuke Hozumi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-Hozumi";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yhozumi.Yusuke-Hozumi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Yusuke Hozumi/Dynamic-Animator-Bridging-Header.h";
 			};
 			name = Debug;
@@ -479,10 +503,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Yusuke Hozumi/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.Suke.Yusuke-Hozumi";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yhozumi.Yusuke-Hozumi";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Yusuke Hozumi/Dynamic-Animator-Bridging-Header.h";
 			};
 			name = Release;
