@@ -17,7 +17,7 @@ class TimelineCollectionViewController: UICollectionViewController {
         
         collectionView?.backgroundColor = .whiteColor()
         
-        let frame = CGRect(x: 0, y: 44, width: self.view.bounds.width, height: self.view.bounds.height)
+        let frame = CGRect(x: 0, y: 60, width: self.view.bounds.width, height: self.view.bounds.height)
         self.view.backgroundColor = .whiteColor()
         collectionView!.frame = frame
         

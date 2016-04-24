@@ -57,22 +57,38 @@
                                     <rect key="frame" x="0.0" y="0.0" width="219" height="182"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="vA4-YH-UgC">
-                                            <rect key="frame" x="-11" y="34" width="240" height="128"/>
+                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="vA4-YH-UgC">
+                                            <rect key="frame" x="0.0" y="-68" width="1140" height="250"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="250" id="xxk-g4-hMf"/>
                                             </constraints>
                                         </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hTm-Gj-hcm">
+                                            <rect key="frame" x="0.0" y="0.0" width="219" height="182"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="hTm-Gj-hcm" firstAttribute="top" secondItem="UQd-Jj-At2" secondAttribute="top" id="6ya-cM-33g"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="centerY" secondItem="UQd-Jj-At2" secondAttribute="centerY" id="OvF-Td-jlW"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="top" secondItem="UQd-Jj-At2" secondAttribute="top" id="SO5-V6-4uR"/>
                                     <constraint firstAttribute="bottom" secondItem="vA4-YH-UgC" secondAttribute="bottom" id="V65-3N-EA9"/>
+                                    <constraint firstAttribute="trailing" secondItem="hTm-Gj-hcm" secondAttribute="trailing" id="W7b-lc-OoK"/>
+                                    <constraint firstItem="vA4-YH-UgC" firstAttribute="leading" secondItem="hTm-Gj-hcm" secondAttribute="leading" id="dcg-Jd-Wy1"/>
+                                    <constraint firstItem="hTm-Gj-hcm" firstAttribute="leading" secondItem="UQd-Jj-At2" secondAttribute="leading" id="s6b-b8-ftZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="hTm-Gj-hcm" secondAttribute="bottom" id="tLZ-cH-Vlw"/>
                                 </constraints>
                                 <size key="customSize" width="219" height="182"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OvF-Td-jlW"/>
+                                        <exclude reference="SO5-V6-4uR"/>
+                                    </mask>
+                                </variation>
                                 <connections>
+                                    <outlet property="imageFilterView" destination="hTm-Gj-hcm" id="jpN-0E-jUm"/>
                                     <outlet property="imageView" destination="vA4-YH-UgC" id="PV0-ck-Uzq"/>
                                 </connections>
                             </collectionViewCell>

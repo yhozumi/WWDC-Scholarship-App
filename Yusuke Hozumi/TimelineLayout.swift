@@ -13,6 +13,10 @@ class TimelineLayout: UICollectionViewLayout {
     
     private var dragOffset: CGFloat = 200
     
+    private let topMargin: CGFloat = 30
+    
+    private let bottomMargin: CGFloat = 10
+    
     private var leftSideWidth: CGFloat {
         return CGRectGetWidth(collectionView!.bounds) - width
     }
@@ -63,6 +67,7 @@ class TimelineLayout: UICollectionViewLayout {
             if indexPath.item == mainCellIndex {
                 let yOffset = regularHeight * nextCellOffset
                 y = collectionView!.contentOffset.y - yOffset
+                y -= topMargin
                 height = mainHeight
             } else if indexPath.item == (mainCellIndex + 1) && indexPath.item != numberOfItems {
                 let maxY = y + regularHeight
@@ -70,7 +75,7 @@ class TimelineLayout: UICollectionViewLayout {
                 y = maxY - height
             }
             
-            frame = CGRect(x: 0 + (CGRectGetWidth(collectionView!.bounds) - width), y: y + 10, width: width, height: height)
+            frame = CGRect(x: 0 + (CGRectGetWidth(collectionView!.bounds) - width), y: y + bottomMargin, width: width, height: height)
             attribute.frame = frame
             cache.append(attribute)
             y = CGRectGetMaxY(frame)
