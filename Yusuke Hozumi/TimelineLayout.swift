@@ -11,7 +11,7 @@ import UIKit
 class TimelineLayout: UICollectionViewLayout {
     private(set) var cache = [UICollectionViewLayoutAttributes]()
     
-    private var dragOffset: CGFloat = 100
+    private var dragOffset: CGFloat = 200
     
     private var leftSideWidth: CGFloat {
         return CGRectGetWidth(collectionView!.bounds) - width
@@ -64,20 +64,11 @@ class TimelineLayout: UICollectionViewLayout {
                 let yOffset = regularHeight * nextCellOffset
                 y = collectionView!.contentOffset.y - yOffset
                 height = mainHeight
-                cellsCenterY = abs(y - mainHeight / 2)
             } else if indexPath.item == (mainCellIndex + 1) && indexPath.item != numberOfItems {
                 let maxY = y + regularHeight
                 height = regularHeight + max((mainHeight - regularHeight) * nextCellOffset, 0)
                 y = maxY - height
-                cellsCenterY = abs(y - regularHeight / 2)
             }
-            
-            
-//            let bubbleFrame = CGRect(x: leftSideWidth / 2 - 5, y: cellsCenterY! - 5, width: 10, height: 10)
-//            for item in 0...numberOfItems {
-//                let bubble = BubbleView(frame: bubbleFrame, color: darkBlue, text: "")
-//                collectionView?.addSubview(bubble)
-//            }
             
             frame = CGRect(x: 0 + (CGRectGetWidth(collectionView!.bounds) - width), y: y + 10, width: width, height: height)
             attribute.frame = frame
@@ -90,7 +81,7 @@ class TimelineLayout: UICollectionViewLayout {
         var layoutAttributes = [UICollectionViewLayoutAttributes]()
         let _ = cache.map {
             if CGRectIntersectsRect($0.frame, rect) {
-                layoutAttributes.append($0)
+                layoutAttributes.append($0)                
             }
         }
         return layoutAttributes

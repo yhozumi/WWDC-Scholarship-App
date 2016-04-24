@@ -20,6 +20,7 @@ class TimelineCollectionViewController: UICollectionViewController {
         let frame = CGRect(x: 0, y: 44, width: self.view.bounds.width, height: self.view.bounds.height)
         self.view.backgroundColor = .whiteColor()
         collectionView!.frame = frame
+        
     }
  
 }
@@ -38,8 +39,8 @@ extension TimelineCollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-        cell.backgroundColor = colors[indexPath.row]
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TimelineCell
+        
         return cell
     }
 }

@@ -50,14 +50,31 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="2Xy-hu-5nx" customClass="TimelineLayout" customModule="Yusuke_Hozumi" customModuleProvider="target"/>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="UQd-Jj-At2">
-                                <rect key="frame" x="0.0" y="64" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="UQd-Jj-At2" customClass="TimelineCell" customModule="Yusuke_Hozumi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="219" height="182"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="219" height="182"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="vA4-YH-UgC">
+                                            <rect key="frame" x="-11" y="34" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="250" id="xxk-g4-hMf"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="vA4-YH-UgC" firstAttribute="centerY" secondItem="UQd-Jj-At2" secondAttribute="centerY" id="OvF-Td-jlW"/>
+                                    <constraint firstItem="vA4-YH-UgC" firstAttribute="top" secondItem="UQd-Jj-At2" secondAttribute="top" id="SO5-V6-4uR"/>
+                                    <constraint firstAttribute="bottom" secondItem="vA4-YH-UgC" secondAttribute="bottom" id="V65-3N-EA9"/>
+                                </constraints>
+                                <size key="customSize" width="219" height="182"/>
+                                <connections>
+                                    <outlet property="imageView" destination="vA4-YH-UgC" id="PV0-ck-Uzq"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -256,4 +273,7 @@
             <point key="canvasLocation" x="2238" y="317"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Japan" width="1140" height="786"/>
+    </resources>
 </document>

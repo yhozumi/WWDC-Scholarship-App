@@ -9,5 +9,11 @@
 import UIKit
 
 class TimelineCell: UICollectionViewCell {
+    @IBOutlet weak var imageView: UIImageView!
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        imageView.alpha = 1.0
+    }
 }
