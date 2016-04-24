@@ -10,7 +10,9 @@ import UIKit
 
 class TimelineCollectionViewController: UICollectionViewController {
     
-    private let colors = UIColor.palette()
+    private let events = [TimelineEvent]()
+    private var json: AnyObject?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +23,18 @@ class TimelineCollectionViewController: UICollectionViewController {
         self.view.backgroundColor = .whiteColor()
         collectionView!.frame = frame
         
+        parseJSON()
+    }
+    
+    private func parseJSON() {
+        guard let path = NSBundle.mainBundle().pathForResource("TimelineEvents", ofType: "json") else { return }
+        let data = NSData(contentsOfURL: NSURL(fileURLWithPath: path, isDirectory: true))
+        do {
+            json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
+            print(json)
+        } catch {
+            print("error reading json")
+        }
     }
  
 }

@@ -23,7 +23,8 @@
 		BACA4ADB1CA9574A00940EBA /* Yusuke_HozumiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ADA1CA9574A00940EBA /* Yusuke_HozumiUITests.swift */; };
 		BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B781CA9611800E8FB83 /* BubbleView.swift */; };
 		BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */; };
-		BAF0F13A1CC9C9360047A07F /* UIColor+Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF0F1391CC9C9360047A07F /* UIColor+Palette.swift */; };
+		BAF0F13C1CCCFF190047A07F /* TimelineEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */; };
+		BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */; };
 		BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +69,8 @@
 		BACA4ADC1CA9574A00940EBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BADD0B781CA9611800E8FB83 /* BubbleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleView.swift; sourceTree = "<group>"; };
 		BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
-		BAF0F1391CC9C9360047A07F /* UIColor+Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Palette.swift"; sourceTree = "<group>"; };
+		BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = TimelineEvents.json; sourceTree = "<group>"; };
+		BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEvent.swift; sourceTree = "<group>"; };
 		BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,6 +187,7 @@
 		BADD0B731CA9602500E8FB83 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -211,7 +214,7 @@
 				BACA4AC61CA9574900940EBA /* Info.plist */,
 				BA3FCD291CAB61B6009629AF /* Dynamic-Animator-Bridging-Header.h */,
 				BA2911031CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift */,
-				BAF0F1391CC9C9360047A07F /* UIColor+Palette.swift */,
+				BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 				BACA4AC51CA9574900940EBA /* LaunchScreen.storyboard in Resources */,
 				BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */,
 				BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */,
+				BAF0F13C1CCCFF190047A07F /* TimelineEvents.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,10 +353,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */,
-				BAF0F13A1CC9C9360047A07F /* UIColor+Palette.swift in Sources */,
 				BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */,
 				BA2910FE1CC0401C0063FE21 /* PhotosViewController.swift in Sources */,
 				BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */,
+				BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */,
 				BA02A8451CC9C0E700E19CD9 /* TimelineLayout.swift in Sources */,
 				BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */,
 				BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */,

@@ -58,7 +58,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="vA4-YH-UgC">
-                                            <rect key="frame" x="0.0" y="-68" width="1140" height="250"/>
+                                            <rect key="frame" x="0.0" y="-68" width="363" height="250"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="250" id="xxk-g4-hMf"/>
                                             </constraints>
@@ -67,18 +67,27 @@
                                             <rect key="frame" x="0.0" y="0.0" width="219" height="182"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-OS-pQ8">
+                                            <rect key="frame" x="0.0" y="78" width="219" height="27.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
                                     <constraint firstItem="hTm-Gj-hcm" firstAttribute="top" secondItem="UQd-Jj-At2" secondAttribute="top" id="6ya-cM-33g"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="centerY" secondItem="UQd-Jj-At2" secondAttribute="centerY" id="OvF-Td-jlW"/>
+                                    <constraint firstItem="wdO-OS-pQ8" firstAttribute="leading" secondItem="UQd-Jj-At2" secondAttribute="leading" id="S05-2L-6rg"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="top" secondItem="UQd-Jj-At2" secondAttribute="top" id="SO5-V6-4uR"/>
                                     <constraint firstAttribute="bottom" secondItem="vA4-YH-UgC" secondAttribute="bottom" id="V65-3N-EA9"/>
                                     <constraint firstAttribute="trailing" secondItem="hTm-Gj-hcm" secondAttribute="trailing" id="W7b-lc-OoK"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="leading" secondItem="hTm-Gj-hcm" secondAttribute="leading" id="dcg-Jd-Wy1"/>
+                                    <constraint firstItem="wdO-OS-pQ8" firstAttribute="centerY" secondItem="UQd-Jj-At2" secondAttribute="centerY" id="fMU-Nk-yIA"/>
                                     <constraint firstItem="hTm-Gj-hcm" firstAttribute="leading" secondItem="UQd-Jj-At2" secondAttribute="leading" id="s6b-b8-ftZ"/>
                                     <constraint firstAttribute="bottom" secondItem="hTm-Gj-hcm" secondAttribute="bottom" id="tLZ-cH-Vlw"/>
+                                    <constraint firstAttribute="trailing" secondItem="wdO-OS-pQ8" secondAttribute="trailing" id="ylz-dC-NcH"/>
                                 </constraints>
                                 <size key="customSize" width="219" height="182"/>
                                 <variation key="default">
@@ -290,6 +299,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Japan" width="1140" height="786"/>
+        <image name="Japan" width="363" height="250"/>
     </resources>
 </document>
