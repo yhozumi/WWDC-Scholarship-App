@@ -19,5 +19,7 @@ class UINavigationController_InvisibleNav: UINavigationController {
         bar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         bar.backgroundColor = .clearColor()
         bar.shadowImage = UIImage()
+        bar.tintColor = darkBlue
+
     }
 }

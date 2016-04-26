@@ -10,9 +10,7 @@ import UIKit
 
 class TimelineCollectionViewController: UICollectionViewController {
     
-    private let events = [TimelineEvent]()
-    private var json: AnyObject?
-    
+    private var events = [TimelineEvent]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,19 +22,30 @@ class TimelineCollectionViewController: UICollectionViewController {
         collectionView!.frame = frame
         
         parseJSON()
+        
     }
     
     private func parseJSON() {
-        guard let path = NSBundle.mainBundle().pathForResource("TimelineEvents", ofType: "json") else { return }
-        let data = NSData(contentsOfURL: NSURL(fileURLWithPath: path, isDirectory: true))
+        guard let jsonDataPath = NSBundle.mainBundle().pathForResource("TimelineEvents", ofType: "json") else { return }
+        guard let jsonData = NSData(contentsOfFile: jsonDataPath) else { print("bad data");return }
+        
         do {
-            json = try NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.AllowFragments)
-            print(json)
+            let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) as! NSArray
+           
+            for i in 0..<json.count {
+                guard let jsonDict = json[i] as? [String: AnyObject] else { return }
+                do {
+                    events.append(try TimelineEvent(json: jsonDict))
+                } catch {
+                    print(error)
+                }
+            }
+            print(events.count)
+            
         } catch {
-            print("error reading json")
+            print("\(error)")
         }
     }
- 
 }
 
 //TimelineCollectionViewController DataSource
@@ -54,6 +63,7 @@ extension TimelineCollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TimelineCell
+        cell.titleLabel.text = events[indexPath.row].title
         
         return cell
     }

@@ -11,11 +11,10 @@ import UIKit
 class TimelineCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageFilterView: UIView!
-    
+    @IBOutlet weak var titleLabel: UILabel!
+  
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        imageView.alpha = 1.0
     }
     
     override func applyLayoutAttributes(layoutAttributes: UICollectionViewLayoutAttributes) {
@@ -26,8 +25,13 @@ class TimelineCell: UICollectionViewCell {
         
         let delta = 1 - ((mainHeight - CGRectGetHeight(frame)) / (mainHeight - regularHeight))
         
-        let minAlpha: CGFloat = 0.35
-        let maxAlpha: CGFloat = 0.85
-        imageFilterView.alpha = maxAlpha - (delta * (maxAlpha - minAlpha))
+        let minFilterAlpha: CGFloat = 0.35
+        let maxFilterAlpha: CGFloat = 0.85
+        
+        let minTextAlpha: CGFloat = 0.4
+        let maxTextAlpha: CGFloat = 1.0
+        
+        imageFilterView.alpha = maxFilterAlpha - (delta * (maxFilterAlpha - minFilterAlpha))
+        titleLabel.alpha = minTextAlpha - (delta * (minTextAlpha - maxTextAlpha))
     }
 }

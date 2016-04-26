@@ -1,97 +1,91 @@
-"Events": [
+[
     {"title": "Born",
-    "date": "12/14/1989",
+    "date": "12-14-1989",
     "description": "I was boring in Fukushima, Japan",
     "index": 0
     },
            
     {"title": "The Move",
-    "date": "07/11/1996",
+    "date": "07-11-1996",
     "description": "By my fathers work condition I was forced to move to Washington C.H., Ohio",
     "index": 1
     },
-           
-    {"title": "Computer",
-    "date": "05/23/2000",
-    "description": "Got my first computer. A sony Vaio computer.",
-    "index": 2
-    },
-    
+ 
     {"title": "HTML/CSS",
-    "date": "11/10/2004",
+    "date": "11-10-2004",
     "description": "Via the social networking website \"Myspace\" I got exposed to HTML and CSS",
-    "index": 3
+    "index": 2
     },
            
     {"title": "Computer Science",
-    "date": "08/24/2006",
+    "date": "08-24-2006",
     "description": "enrolled in my first computer science class in High school.",
-    "index": 4
+    "index": 3
     },
    
     {"title": "Graduation",
-    "date": "05/20/2008",
+    "date": "05-20-2008",
     "description": "Graduated High School! Also meant that my parents moved back to Japan.",
-    "index": 5
+    "index": 4
     },
            
     {"title": "College",
-    "date": "09/10/2009",
+    "date": "09-10-2009",
     "description": "Started attending college for Respiratory Therapy, which later changed to Computer Science!",
-    "index": 6
+    "index": 5
     },
     
     {"title": "Macbook Pro",
-    "date": "12/14/2010",
+    "date": "12-14-2010",
     "description": "As a birthday present I receieved my first Macbook Pro!",
-    "index": 7
+    "index": 6
     },
     
     {"title": "Apple",
-    "date": "11/11/2011",
+    "date": "11-11-2011",
     "description": "Apple gave me a job as Specialist at Easton Town Center, Columbus Ohio!",
-    "index": 8
+    "index": 7
     },
     
     {"title": "Genius",
-    "date": "10/14/2013",
+    "date": "10-14-2013",
     "description": "Promoted to Genius position at Apple! Dreams do come true!",
-    "index": 9
+    "index": 8
     },
     
     {"title": "WWDC 2014",
-    "date": "06/02/2014",
+    "date": "06-02-2014",
     "description": "Swift Programming Language announced! This sparked something inside me.",
-    "index": 10
+    "index": 9
     },
            
     {"title": "C#",
-    "date": "09/01/2014",
+    "date": "09-01-2014",
     "description": "Started taking my first programming course in collage. C#; Hello; World!",
-    "index": 11
+    "index": 10
     },
     
     {"title": "Swift",
-    "date": "03/14/2015",
+    "date": "03-14-2015",
     "description": "Started studying Swift/Objective-C and Cocoa touch development on my own. Thanks developer.apple.com",
-    "index": 12
+    "index": 11
     },
            
     {"title": "WWDC 2015",
-    "date": "06/08/2015",
+    "date": "06-08-2015",
     "description": "Watched almost all WWDC 2015 videos and decided that I would try and do anything to attend WWDC and some day present at WWDC.",
-    "index": 13
+    "index": 12
     },
       
     {"title": "RWDevCon",
-    "date": "03/12/2016",
+    "date": "03-12-2016",
     "description": "Chosen as free ticket winner for RWDevCon 2016. First Developer Conference experience!",
-    "index": 14
+    "index": 13
     },
            
     {"title": "WWDC 2016",
-    "date": "06/13/2016",
+    "date": "06-13-2016",
     "description": "This is my submission for Scholarship. Thanks for taking the time. I did try to .reduce this array of events.",
-    "index": 15
+    "index": 14
     }
 ]

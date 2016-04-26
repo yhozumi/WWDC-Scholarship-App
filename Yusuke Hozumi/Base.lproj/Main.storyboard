@@ -67,9 +67,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="219" height="182"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-OS-pQ8">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-OS-pQ8">
                                             <rect key="frame" x="0.0" y="78" width="219" height="27.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                            <fontDescription key="fontDescription" type="system" weight="thin" pointSize="26"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -99,6 +99,7 @@
                                 <connections>
                                     <outlet property="imageFilterView" destination="hTm-Gj-hcm" id="jpN-0E-jUm"/>
                                     <outlet property="imageView" destination="vA4-YH-UgC" id="PV0-ck-Uzq"/>
+                                    <outlet property="titleLabel" destination="wdO-OS-pQ8" id="jZc-FR-9MB"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

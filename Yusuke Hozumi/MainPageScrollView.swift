@@ -34,7 +34,7 @@ class MainPageScrollView: UIScrollView {
         
     
         setUpDynamicAnimator()
-            animator.debugEnabled = false
+        //animator.debugEnabled = false
         setUpBubbleViews()
         allowRotationOnViews(bubbles, allowRotation: false)
     }
@@ -95,11 +95,6 @@ class MainPageScrollView: UIScrollView {
     }
 }
 
-
-extension MainPageScrollView: UIDynamicAnimatorDelegate {
-    
-}
-
 extension MainPageScrollView: UICollisionBehaviorDelegate {
     //When the bubbles contact the center boundary it will cause the views alpha to animate
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, atPoint p: CGPoint) {
@@ -110,4 +105,7 @@ extension MainPageScrollView: UICollisionBehaviorDelegate {
     }
 }
 
+extension MainPageScrollView: UIDynamicAnimatorDelegate {
+    
+}
 
