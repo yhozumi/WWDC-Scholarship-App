@@ -59,12 +59,17 @@ extension TimelineCollectionViewController {
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 12
+        return events.count
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! TimelineCell
-        cell.titleLabel.text = events[indexPath.row].title
+        let event = events[indexPath.row]
+        
+        cell.titleLabel.text = event.title
+        cell.dateLabel.text = event.date
+        cell.descriptionLabel.text = event.description
+        cell.imageView.image = UIImage(named: event.image)
         
         return cell
     }

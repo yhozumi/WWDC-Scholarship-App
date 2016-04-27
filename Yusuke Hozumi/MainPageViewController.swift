@@ -48,7 +48,6 @@ class MainPageViewController: UIViewController {
         scrollView = MainPageScrollView(frame: self.view.bounds)
         scrollView.contentSize = CGSize(width: self.view.bounds.width * 1.5, height: self.view.bounds.height)
         scrollView.backgroundColor = UIColor.clearColor()
-        print(scrollView.center)
         scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         scrollView.delegate = self
         let _ = scrollView.bubbles.map { $0.delegate = self }

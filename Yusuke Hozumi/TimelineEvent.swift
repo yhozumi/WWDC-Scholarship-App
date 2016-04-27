@@ -14,12 +14,14 @@ struct TimelineEvent {
         case InvalidDate
         case InvalidDescription
         case InvalidIndex
+        case InvalidImage
     }
     
     private(set) var title: String
     private(set) var date: String
     private(set) var description: String
     private(set) var index: Int
+    private(set) var image: String
     private let jsonArray: [AnyObject] = []
     
     private func parseJSON() {
@@ -38,5 +40,8 @@ struct TimelineEvent {
         
         guard let index = json["index"] as? Int else { throw JSONParseError.InvalidIndex }
         self.index = index
+        
+        guard let image = json["image"] as? String else { throw JSONParseError.InvalidImage }
+        self.image = image
     }
 }

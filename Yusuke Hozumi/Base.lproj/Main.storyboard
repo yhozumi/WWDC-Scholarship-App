@@ -57,7 +57,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="219" height="182"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Japan" translatesAutoresizingMaskIntoConstraints="NO" id="vA4-YH-UgC">
+                                        <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vA4-YH-UgC">
                                             <rect key="frame" x="0.0" y="-68" width="363" height="250"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="250" id="xxk-g4-hMf"/>
@@ -67,9 +67,21 @@
                                             <rect key="frame" x="0.0" y="0.0" width="219" height="182"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-OS-pQ8">
-                                            <rect key="frame" x="0.0" y="78" width="219" height="27.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-OS-pQ8">
+                                            <rect key="frame" x="0.0" y="76" width="219" height="30.5"/>
                                             <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="26"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" misplaced="YES" text="date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vR7-1w-ANU">
+                                            <rect key="frame" x="8" y="110" width="203" height="17.5"/>
+                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="13"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4n-eM-z1N">
+                                            <rect key="frame" x="8" y="121.5" width="203" height="52.5"/>
+                                            <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="15"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -78,14 +90,21 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="hTm-Gj-hcm" firstAttribute="top" secondItem="UQd-Jj-At2" secondAttribute="top" id="6ya-cM-33g"/>
+                                    <constraint firstItem="vR7-1w-ANU" firstAttribute="trailing" secondItem="UQd-Jj-At2" secondAttribute="trailingMargin" id="9L1-ck-DsF"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="M4n-eM-z1N" secondAttribute="bottom" id="A1U-FC-Fx0"/>
+                                    <constraint firstItem="vR7-1w-ANU" firstAttribute="top" secondItem="wdO-OS-pQ8" secondAttribute="bottom" constant="4" id="LJQ-It-C58"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="centerY" secondItem="UQd-Jj-At2" secondAttribute="centerY" id="OvF-Td-jlW"/>
                                     <constraint firstItem="wdO-OS-pQ8" firstAttribute="leading" secondItem="UQd-Jj-At2" secondAttribute="leading" id="S05-2L-6rg"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="top" secondItem="UQd-Jj-At2" secondAttribute="top" id="SO5-V6-4uR"/>
+                                    <constraint firstItem="M4n-eM-z1N" firstAttribute="leading" secondItem="UQd-Jj-At2" secondAttribute="leadingMargin" id="Tzr-Kg-jhU"/>
                                     <constraint firstAttribute="bottom" secondItem="vA4-YH-UgC" secondAttribute="bottom" id="V65-3N-EA9"/>
                                     <constraint firstAttribute="trailing" secondItem="hTm-Gj-hcm" secondAttribute="trailing" id="W7b-lc-OoK"/>
                                     <constraint firstItem="vA4-YH-UgC" firstAttribute="leading" secondItem="hTm-Gj-hcm" secondAttribute="leading" id="dcg-Jd-Wy1"/>
                                     <constraint firstItem="wdO-OS-pQ8" firstAttribute="centerY" secondItem="UQd-Jj-At2" secondAttribute="centerY" id="fMU-Nk-yIA"/>
+                                    <constraint firstItem="vR7-1w-ANU" firstAttribute="bottom" secondItem="M4n-eM-z1N" secondAttribute="top" constant="4" id="lHZ-Zk-3kZ"/>
+                                    <constraint firstItem="vR7-1w-ANU" firstAttribute="leading" secondItem="UQd-Jj-At2" secondAttribute="leadingMargin" id="pk2-tN-0aW"/>
                                     <constraint firstItem="hTm-Gj-hcm" firstAttribute="leading" secondItem="UQd-Jj-At2" secondAttribute="leading" id="s6b-b8-ftZ"/>
+                                    <constraint firstItem="M4n-eM-z1N" firstAttribute="trailing" secondItem="UQd-Jj-At2" secondAttribute="trailingMargin" id="sul-Jv-qSO"/>
                                     <constraint firstAttribute="bottom" secondItem="hTm-Gj-hcm" secondAttribute="bottom" id="tLZ-cH-Vlw"/>
                                     <constraint firstAttribute="trailing" secondItem="wdO-OS-pQ8" secondAttribute="trailing" id="ylz-dC-NcH"/>
                                 </constraints>
@@ -97,6 +116,8 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <outlet property="dateLabel" destination="vR7-1w-ANU" id="eHj-Ea-0cD"/>
+                                    <outlet property="descriptionLabel" destination="M4n-eM-z1N" id="owk-Ys-qqX"/>
                                     <outlet property="imageFilterView" destination="hTm-Gj-hcm" id="jpN-0E-jUm"/>
                                     <outlet property="imageView" destination="vA4-YH-UgC" id="PV0-ck-Uzq"/>
                                     <outlet property="titleLabel" destination="wdO-OS-pQ8" id="jZc-FR-9MB"/>
@@ -299,7 +320,4 @@
             <point key="canvasLocation" x="2238" y="317"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Japan" width="363" height="250"/>
-    </resources>
 </document>

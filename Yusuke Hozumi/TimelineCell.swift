@@ -12,6 +12,8 @@ class TimelineCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var imageFilterView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
   
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,13 +29,15 @@ class TimelineCell: UICollectionViewCell {
         
         let delta = 1 - ((mainHeight - CGRectGetHeight(frame)) / (mainHeight - regularHeight))
         
-        let minFilterAlpha: CGFloat = 0.35
-        let maxFilterAlpha: CGFloat = 0.85
+        let minFilterAlpha: CGFloat = 0.25
+        let maxFilterAlpha: CGFloat = 0.75
         
         let minTextAlpha: CGFloat = 0.4
         let maxTextAlpha: CGFloat = 1.0
         
         imageFilterView.alpha = maxFilterAlpha - (delta * (maxFilterAlpha - minFilterAlpha))
         titleLabel.alpha = minTextAlpha - (delta * (minTextAlpha - maxTextAlpha))
+        dateLabel.alpha = minTextAlpha - (delta * (minTextAlpha - maxTextAlpha))
+        descriptionLabel.alpha = minTextAlpha - (delta * (minTextAlpha - maxTextAlpha))
     }
 }

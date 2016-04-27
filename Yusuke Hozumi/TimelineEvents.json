@@ -2,90 +2,105 @@
     {"title": "Born",
     "date": "12-14-1989",
     "description": "I was boring in Fukushima, Japan",
-    "index": 0
+    "index": 0,
+    "image": "japan"
     },
            
     {"title": "The Move",
     "date": "07-11-1996",
     "description": "By my fathers work condition I was forced to move to Washington C.H., Ohio",
-    "index": 1
+    "index": 1,
+    "image": "wch"
     },
  
     {"title": "HTML/CSS",
     "date": "11-10-2004",
     "description": "Via the social networking website \"Myspace\" I got exposed to HTML and CSS",
-    "index": 2
+    "index": 2,
+    "image": "html"
     },
            
     {"title": "Computer Science",
     "date": "08-24-2006",
     "description": "enrolled in my first computer science class in High school.",
-    "index": 3
+    "index": 3,
+    "image": "highschool"
     },
    
     {"title": "Graduation",
     "date": "05-20-2008",
     "description": "Graduated High School! Also meant that my parents moved back to Japan.",
-    "index": 4
+    "index": 4,
+    "image": "graduation"
     },
            
     {"title": "College",
     "date": "09-10-2009",
     "description": "Started attending college for Respiratory Therapy, which later changed to Computer Science!",
-    "index": 5
+    "index": 5,
+    "image": "college"
     },
     
     {"title": "Macbook Pro",
     "date": "12-14-2010",
     "description": "As a birthday present I receieved my first Macbook Pro!",
-    "index": 6
+    "index": 6,
+    "image": "macbookpro"
     },
     
     {"title": "Apple",
     "date": "11-11-2011",
     "description": "Apple gave me a job as Specialist at Easton Town Center, Columbus Ohio!",
-    "index": 7
+    "index": 7,
+    "image": "easton"
     },
     
     {"title": "Genius",
     "date": "10-14-2013",
     "description": "Promoted to Genius position at Apple! Dreams do come true!",
-    "index": 8
+    "index": 8,
+    "image": "genius"
     },
     
     {"title": "WWDC 2014",
     "date": "06-02-2014",
     "description": "Swift Programming Language announced! This sparked something inside me.",
-    "index": 9
+    "index": 9,
+    "image": "wwdc2014"
     },
            
     {"title": "C#",
     "date": "09-01-2014",
     "description": "Started taking my first programming course in collage. C#; Hello; World!",
-    "index": 10
+    "index": 10,
+    "image": "csharp"
     },
     
     {"title": "Swift",
     "date": "03-14-2015",
     "description": "Started studying Swift/Objective-C and Cocoa touch development on my own. Thanks developer.apple.com",
-    "index": 11
+    "index": 11,
+    "image": "swift"
     },
            
     {"title": "WWDC 2015",
     "date": "06-08-2015",
     "description": "Watched almost all WWDC 2015 videos and decided that I would try and do anything to attend WWDC and some day present at WWDC.",
-    "index": 12
+    "index": 12,
+    "image": "wwdc2015"
     },
       
     {"title": "RWDevCon",
     "date": "03-12-2016",
     "description": "Chosen as free ticket winner for RWDevCon 2016. First Developer Conference experience!",
-    "index": 13
+    "index": 13,
+    "image": "devcon"
     },
            
     {"title": "WWDC 2016",
     "date": "06-13-2016",
     "description": "This is my submission for Scholarship. Thanks for taking the time. I did try to .reduce this array of events.",
-    "index": 14
+    "index": 14,
+    "image": "wwdc2016"
     }
 ]
