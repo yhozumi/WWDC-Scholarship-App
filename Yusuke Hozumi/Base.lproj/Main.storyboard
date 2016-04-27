@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="3050" y="317"/>
         </scene>
-        <!--About Me View Controller-->
+        <!--About me-->
         <scene sceneID="mO7-RC-loh">
             <objects>
                 <viewController storyboardIdentifier="About Me" id="kAw-oZ-aWT" customClass="AboutMeViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.17254901960784313" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DJe-uO-v5I"/>
+                    <navigationItem key="navigationItem" title="About me" id="DJe-uO-v5I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-9P-9QB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

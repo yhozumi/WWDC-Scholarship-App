@@ -21,11 +21,11 @@ class UINavigationController_InvisibleNav: UINavigationController {
     
     private func configureNavigationBar(bar: UINavigationBar) {
         bar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        bar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "menlo", size: 15)!, NSForegroundColorAttributeName: UIColor.commentGreenColor()]
-        bar.backgroundColor = UIColor.darkBackGroundColor()
+        bar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "menlo", size: 17)!, NSForegroundColorAttributeName: UIColor.commentGreenColor()]
+        bar.backgroundColor = UIColor.clearColor()
         bar.shadowImage = UIImage()
         bar.tintColor = UIColor.commentGreenColor()
-        self.navigationItem.backBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "menlo", size: 15)!], forState: .Normal)
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: "menlo", size: 17)!], forState: .Normal)
     }
     
     

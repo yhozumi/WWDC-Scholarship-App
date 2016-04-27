@@ -31,13 +31,13 @@ class TimelineCell: UICollectionViewCell {
         
         let minFilterAlpha: CGFloat = 0.25
         let maxFilterAlpha: CGFloat = 0.75
-        
+    
         let minTextAlpha: CGFloat = 0.4
         let maxTextAlpha: CGFloat = 1.0
         
         imageFilterView.alpha = maxFilterAlpha - (delta * (maxFilterAlpha - minFilterAlpha))
         titleLabel.alpha = minTextAlpha - (delta * (minTextAlpha - maxTextAlpha))
         dateLabel.alpha = minTextAlpha - (delta * (minTextAlpha - maxTextAlpha))
-        descriptionLabel.alpha = minTextAlpha - (delta * (minTextAlpha - maxTextAlpha))
+        descriptionLabel.alpha = delta
     }
 }

@@ -21,6 +21,7 @@ class TimelineCollectionViewController: UICollectionViewController {
     private func configureCollectionView() {
         let frame = CGRect(x: 0, y: 60, width: self.view.bounds.width, height: self.view.bounds.height)
         self.collectionView?.backgroundColor = UIColor.darkBackGroundColor()
+        self.collectionView!.decelerationRate = UIScrollViewDecelerationRateFast
         self.view.backgroundColor = UIColor.darkBackGroundColor()
         self.collectionView!.frame = frame
     }
@@ -46,7 +47,6 @@ class TimelineCollectionViewController: UICollectionViewController {
             print("\(error)")
         }
     }
-    
 }
 
 //TimelineCollectionViewController DataSource

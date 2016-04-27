@@ -1,14 +1,14 @@
 [
     {"title": "Born",
     "date": "12-14-1989",
-    "description": "I was boring in Fukushima, Japan",
+    "description": "I was born in Fukushima, Japan",
     "index": 0,
     "image": "japan"
     },
            
     {"title": "The Move",
     "date": "07-11-1996",
-    "description": "By my fathers work condition I was forced to move to Washington C.H., Ohio",
+    "description": "Because of my fathers work condition, we moved to Washington C.H., Ohio",
     "index": 1,
     "image": "wch"
     },
@@ -50,7 +50,7 @@
     
     {"title": "Apple",
     "date": "11-11-2011",
-    "description": "Apple gave me a job as Specialist at Easton Town Center, Columbus Ohio!",
+    "description": "Apple gave me a job as a Specialist at Easton Town Center, Columbus Ohio!",
     "index": 7,
     "image": "easton"
     },
@@ -78,28 +78,28 @@
     
     {"title": "Swift",
     "date": "03-14-2015",
-    "description": "Started studying Swift/Objective-C and Cocoa touch development on my own. Thanks developer.apple.com",
+    "description": "Started studying Swift/Objective-C and Cocoa touch development on my own. Thanks to developer.apple.com",
     "index": 11,
     "image": "swift"
     },
            
     {"title": "WWDC 2015",
     "date": "06-08-2015",
-    "description": "Watched almost all WWDC 2015 videos and decided that I would try and do anything to attend WWDC and some day present at WWDC.",
+    "description": "Watched almost all WWDC 2015 videos and decided that I would try anything to attend WWDC and someday present at WWDC.",
     "index": 12,
     "image": "wwdc2015"
     },
       
     {"title": "RWDevCon",
     "date": "03-12-2016",
-    "description": "Chosen as free ticket winner for RWDevCon 2016. First Developer Conference experience!",
+    "description": "Chosen as the free ticket winner for RWDevCon 2016. First Developer Conference experience!",
     "index": 13,
     "image": "devcon"
     },
            
     {"title": "WWDC 2016",
     "date": "06-13-2016",
-    "description": "This is my submission for Scholarship. Thanks for taking the time. I did try to .reduce this array of events.",
+    "description": "This is my submission for the 2016 WWDC Scholarship. Thanks for taking the time. I did try to .reduce() this array of events.",
     "index": 14,
     "image": "wwdc2016"
     }

@@ -11,11 +11,13 @@ import UIKit
 class TimelineLayout: UICollectionViewLayout {
     private(set) var cache = [UICollectionViewLayoutAttributes]()
     
-    private var dragOffset: CGFloat = 200
+    private var dragOffset: CGFloat = 170
     
     private let topMargin: CGFloat = 30
     
     private let bottomMargin: CGFloat = 10
+    
+    private var firstTime: Bool = true
     
     private var leftSideWidth: CGFloat {
         return CGRectGetWidth(collectionView!.bounds) - width
@@ -26,7 +28,7 @@ class TimelineLayout: UICollectionViewLayout {
     }
     
     private var nextCellOffset: CGFloat {
-        return collectionView!.contentOffset.y / dragOffset - CGFloat(mainCellIndex)
+        return collectionView!.contentOffset.y / dragOffset  - CGFloat(mainCellIndex)
     }
     
     private var width: CGFloat {
@@ -40,8 +42,6 @@ class TimelineLayout: UICollectionViewLayout {
     private var numberOfItems: Int {
         return collectionView!.numberOfItemsInSection(0)
     }
-    
-    private var cellsCenterY: CGFloat?
     
     override func collectionViewContentSize() -> CGSize {
         let contentHeight = CGFloat(numberOfItems) * dragOffset + (height - dragOffset)
@@ -67,7 +67,10 @@ class TimelineLayout: UICollectionViewLayout {
             if indexPath.item == mainCellIndex {
                 let yOffset = regularHeight * nextCellOffset
                 y = collectionView!.contentOffset.y - yOffset
-                y -= topMargin
+                if firstTime {
+                    y -= topMargin
+                    firstTime = false
+                }
                 height = mainHeight
             } else if indexPath.item == (mainCellIndex + 1) && indexPath.item != numberOfItems {
                 let maxY = y + regularHeight
@@ -80,6 +83,12 @@ class TimelineLayout: UICollectionViewLayout {
             cache.append(attribute)
             y = CGRectGetMaxY(frame)
         }
+    }
+    
+    override func targetContentOffsetForProposedContentOffset(proposedContentOffset: CGPoint, withScrollingVelocity velocity: CGPoint) -> CGPoint {
+        let itemIndex = round(proposedContentOffset.y / dragOffset)
+        let yOffset = itemIndex * dragOffset
+        return CGPoint(x: 0, y: yOffset)
     }
     
     override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
