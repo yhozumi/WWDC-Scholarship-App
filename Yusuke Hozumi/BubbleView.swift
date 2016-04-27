@@ -15,6 +15,7 @@ protocol BubbleViewDelegate: class {
 class BubbleView: UIView {
     private var label: UILabel!
     private(set) var color: UIColor?
+    private(set) var textColor: UIColor?
     private(set) var text: String?
     
     weak var delegate: BubbleViewDelegate?
@@ -23,9 +24,10 @@ class BubbleView: UIView {
         return .Ellipse
     }
     
-    convenience init(frame: CGRect, color: UIColor, text: String) {
+    convenience init(frame: CGRect, color: UIColor, textColor: UIColor, text: String) {
         self.init(frame: frame)
         self.color = color
+        self.textColor = textColor
         self.text = text
         configureBubbleView()
     }
@@ -40,10 +42,10 @@ class BubbleView: UIView {
     
     private func configureLabel() {
         label = UILabel()
-        label.text = text
+        label.attributedText = NSAttributedString(string: self.text!, attributes: [NSFontAttributeName: UIFont(name: "Menlo-Bold", size: 15.0)!])
+        label.textColor = textColor
         label.sizeToFit()
         label.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.width / 2)
-        label.textColor = .whiteColor()
         addSubview(label)
     }
     

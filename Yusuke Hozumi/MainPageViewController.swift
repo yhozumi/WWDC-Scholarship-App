@@ -8,17 +8,39 @@
 
 import UIKit
 
-let darkBlue = UIColor(red: 24.0/255.0, green: 42.0/255.0, blue: 63.0/255.0, alpha: 1.0)
-
 class MainPageViewController: UIViewController {
     private var scrollView: MainPageScrollView!
     private var animator: UIDynamicAnimator!
     @IBOutlet weak var helloLabel: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpScrollView()
-        showHelloLabel()
+        showBubbleViewAndLabel()
+        self.view.backgroundColor = UIColor(red: 41.0/255.0, green: 44.0/255.0, blue: 54.0/255.0, alpha: 1.0)
+    }
+    
+    private func showBubbleViewAndLabel() {
+        let frame = CGRect(x: self.view.center.x - 57.5, y: self.view.center.y - 57.5, width: 115, height: 115)
+        let bubble = BubbleView(frame: frame, color: UIColor.accentBlueColor(), textColor: UIColor.whiteColor(), text: "Press")
+        bubble.alpha = 0.0
+        self.view.addSubview(bubble)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MainPageViewController.bubbleTapped))
+        bubble.addGestureRecognizer(tapGesture)
+        
+        UIView.animateWithDuration(1.0, animations: {
+            bubble.alpha = 1.0
+            self.helloLabel.alpha = 1.0
+        })
+    }
+    
+    func bubbleTapped(tapGesture: UITapGestureRecognizer) {
+        UIView.animateWithDuration(1.0, animations: {
+            tapGesture.view?.alpha = 0.0
+            }, completion: { _ in
+                tapGesture.view?.removeFromSuperview()
+                self.setUpScrollView()
+        })
     }
     
     //setting up custom scrollView class that has Dynamic Animator in it.
@@ -36,13 +58,10 @@ class MainPageViewController: UIViewController {
     //center's the scrollview so when it loads it's centered
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        scrollView.contentOffset.x = scrollView.contentSize.width / 2 - self.view.bounds.width / 2
-    }
-    
-    private func showHelloLabel() {
-        UIView.animateWithDuration(0.4, animations: {
-            self.helloLabel.alpha = 1.0
-            }, completion: nil)
+        if let scrollView = scrollView {
+            scrollView.contentOffset.x = scrollView.contentSize.width / 2 - self.view.bounds.width / 2
+            print(scrollView.contentSize)
+        }
     }
 }
 

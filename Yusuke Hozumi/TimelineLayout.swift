@@ -75,7 +75,7 @@ class TimelineLayout: UICollectionViewLayout {
                 y = maxY - height
             }
             
-            frame = CGRect(x: 0 + (CGRectGetWidth(collectionView!.bounds) - width), y: y + bottomMargin, width: width, height: height)
+            frame = CGRect(x: ((CGRectGetWidth(collectionView!.bounds) - width)) / 2, y: y + bottomMargin, width: width, height: height)
             attribute.frame = frame
             cache.append(attribute)
             y = CGRectGetMaxY(frame)

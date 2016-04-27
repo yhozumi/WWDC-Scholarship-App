@@ -15,6 +15,7 @@
 		BA2910FE1CC0401C0063FE21 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2910FD1CC0401C0063FE21 /* PhotosViewController.swift */; };
 		BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2911031CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift */; };
 		BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2911051CC3DE3E0063FE21 /* MainPageScrollView.swift */; };
+		BA8AA7951CCFE1E400D103EA /* UIColor+ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7941CCFE1E400D103EA /* UIColor+ColorScheme.swift */; };
 		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
 		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
 		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		BA2911031CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleNav.swift"; sourceTree = "<group>"; };
 		BA2911051CC3DE3E0063FE21 /* MainPageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageScrollView.swift; sourceTree = "<group>"; };
 		BA3FCD291CAB61B6009629AF /* Dynamic-Animator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dynamic-Animator-Bridging-Header.h"; sourceTree = "<group>"; };
+		BA8AA7941CCFE1E400D103EA /* UIColor+ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorScheme.swift"; sourceTree = "<group>"; };
 		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				BA3FCD291CAB61B6009629AF /* Dynamic-Animator-Bridging-Header.h */,
 				BA2911031CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift */,
 				BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */,
+				BA8AA7941CCFE1E400D103EA /* UIColor+ColorScheme.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */,
 				BA2910FE1CC0401C0063FE21 /* PhotosViewController.swift in Sources */,
 				BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */,
+				BA8AA7951CCFE1E400D103EA /* UIColor+ColorScheme.swift in Sources */,
 				BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */,
 				BA02A8451CC9C0E700E19CD9 /* TimelineLayout.swift in Sources */,
 				BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */,

@@ -20,6 +20,11 @@ struct TimelineEvent {
     private(set) var date: String
     private(set) var description: String
     private(set) var index: Int
+    private let jsonArray: [AnyObject] = []
+    
+    private func parseJSON() {
+        
+    }
     
     init(json: [String: AnyObject]) throws {
         guard let title = json["title"] as? String else { throw JSONParseError.InvalidTitle }

@@ -15,11 +15,18 @@ class UINavigationController_InvisibleNav: UINavigationController {
         configureNavigationBar(self.navigationBar)
     }
     
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
     private func configureNavigationBar(bar: UINavigationBar) {
         bar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
-        bar.backgroundColor = .clearColor()
+        bar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "menlo", size: 15)!, NSForegroundColorAttributeName: UIColor.commentGreenColor()]
+        bar.backgroundColor = UIColor.darkBackGroundColor()
         bar.shadowImage = UIImage()
-        bar.tintColor = darkBlue
-
+        bar.tintColor = UIColor.commentGreenColor()
+        self.navigationItem.backBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "menlo", size: 15)!], forState: .Normal)
     }
+    
+    
 }

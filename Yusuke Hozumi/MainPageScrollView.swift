@@ -13,6 +13,8 @@ class MainPageScrollView: UIScrollView {
     private var animator: UIDynamicAnimator!
     private var gravity: UIFieldBehavior!
     private var collision: UICollisionBehavior!
+    private let colorPalette = UIColor.colorPalette()
+    private let textColorPalette = UIColor.bubbleTextColorPalette()
     
     private(set) var bubbles: [BubbleView] = []
     
@@ -32,10 +34,9 @@ class MainPageScrollView: UIScrollView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-    
         setUpDynamicAnimator()
-        //animator.debugEnabled = false
-        setUpBubbleViews()
+        animator.debugEnabled = false
+        setUpBubbleViews(frame)
         allowRotationOnViews(bubbles, allowRotation: false)
     }
     
@@ -60,7 +61,6 @@ class MainPageScrollView: UIScrollView {
     //Takes in an array of UIView and center point to create a gravity field and add's all the UIViews into the gravity field to be affected
     //by the gravity field
     private func configureGravityField(viewsToAdd: [UIView], center: CGPoint) {
-        print("scrollView center: \(scrollViewCenter)")
         let gravity = UIFieldBehavior.radialGravityFieldWithPosition(scrollViewCenter)
         gravity.strength = 1.0
         gravity.minimumRadius = 1.0
@@ -81,14 +81,19 @@ class MainPageScrollView: UIScrollView {
     private func allowRotationOnViews(views: [UIView], allowRotation: Bool) {
         let itemBehavior = UIDynamicItemBehavior(items: views)
         itemBehavior.allowsRotation = allowRotation
-        itemBehavior.elasticity = 0.3
+        itemBehavior.elasticity = 0.1
         animator.addBehavior(itemBehavior)
     }
 
     //Set up code for the bubbleViews and adds the texts into it's label
-    private func setUpBubbleViews() {
-        let rect = CGRect(x: scrollViewCenter.x, y: 150, width: 115, height: 115)
-        let _ = texts.map { bubbles.append(BubbleView(frame: rect, color: darkBlue, text: $0)) }
+    private func setUpBubbleViews(frame: CGRect) {
+        let bubbleSize = CGSize(width: 115.0, height: 115.0)
+        let centerPoint = CGPoint(x: (frame.width / 2 - bubbleSize.width / 2) * 1.5, y: (frame.height / 2 - bubbleSize.height) * 1.5)
+        let bubbleFrame = CGRect(origin: centerPoint, size: bubbleSize)
+        let _ = texts.map {
+            bubbles.append(BubbleView(frame: bubbleFrame, color: colorPalette[texts.indexOf($0)!],
+                textColor: textColorPalette[texts.indexOf($0)!],
+                text: $0)) }
         let _ = bubbles.map { self.addSubview($0)
             $0.alpha = 0.0
         }
@@ -98,7 +103,7 @@ class MainPageScrollView: UIScrollView {
 extension MainPageScrollView: UICollisionBehaviorDelegate {
     //When the bubbles contact the center boundary it will cause the views alpha to animate
     func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, atPoint p: CGPoint) {
-        UIView.animateWithDuration(0.4, animations: { _ in
+        UIView.animateWithDuration(1.0, animations: { _ in
             guard let item = item as? UIView else { return }
             item.alpha = 1.0
         })

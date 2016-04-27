@@ -14,15 +14,15 @@ class TimelineCollectionViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        collectionView?.backgroundColor = .whiteColor()
-        
-        let frame = CGRect(x: 0, y: 60, width: self.view.bounds.width, height: self.view.bounds.height)
-        self.view.backgroundColor = .whiteColor()
-        collectionView!.frame = frame
-        
+        configureCollectionView()
         parseJSON()
-        
+    }
+    
+    private func configureCollectionView() {
+        let frame = CGRect(x: 0, y: 60, width: self.view.bounds.width, height: self.view.bounds.height)
+        self.collectionView?.backgroundColor = UIColor.darkBackGroundColor()
+        self.view.backgroundColor = UIColor.darkBackGroundColor()
+        self.collectionView!.frame = frame
     }
     
     private func parseJSON() {
@@ -46,6 +46,7 @@ class TimelineCollectionViewController: UICollectionViewController {
             print("\(error)")
         }
     }
+    
 }
 
 //TimelineCollectionViewController DataSource

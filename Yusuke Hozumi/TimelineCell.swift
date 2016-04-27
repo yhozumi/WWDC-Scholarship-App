@@ -15,6 +15,8 @@ class TimelineCell: UICollectionViewCell {
   
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.layer.cornerRadius = 10.0
     }
     
     override func applyLayoutAttributes(layoutAttributes: UICollectionViewLayoutAttributes) {
