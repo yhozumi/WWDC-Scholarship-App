@@ -17,13 +17,13 @@ class MainPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         showBubbleViewAndLabel()
-        self.view.backgroundColor = UIColor(red: 41.0/255.0, green: 44.0/255.0, blue: 54.0/255.0, alpha: 1.0)
+        self.view.backgroundColor = UIColor.darkBackGroundColor()
     }
 
     
     private func showBubbleViewAndLabel() {
         let frame = CGRect(x: self.view.center.x - 75, y: self.view.center.y - 75, width: 150, height: 150)
-        let bubble = BubbleView(frame: frame, color: UIColor.accentBlueColor(), textColor: UIColor.whiteColor(), text: "viewWillAppear()")
+        let bubble = BubbleView(frame: frame, color: UIColor.accentBlueColor(), textColor: UIColor.whiteColor(), text: BubbleData.ViewWillAppear)
         bubble.alpha = 0.0
         self.view.addSubview(bubble)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MainPageViewController.bubbleTapped))
@@ -34,6 +34,7 @@ class MainPageViewController: UIViewController {
             self.helloLabel.alpha = 1.0
         })
     }
+    
     
     func bubbleTapped(tapGesture: UITapGestureRecognizer) {
         UIView.animateWithDuration(1.0, animations: {
@@ -52,6 +53,7 @@ class MainPageViewController: UIViewController {
         scrollView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         scrollView.delegate = self
         let _ = scrollView.bubbles.map { $0.delegate = self }
+        registerForPreviewingWithDelegate(self, sourceView: self.scrollView)
         view.addSubview(scrollView)
     }
     
@@ -66,15 +68,31 @@ class MainPageViewController: UIViewController {
 }
 
 extension MainPageViewController: BubbleViewDelegate {
-    //Most Likely to break in the future, -- Find a better way --
-    func bubbleViewPressed(name: String) {
-        guard let viewController = storyboard?.instantiateViewControllerWithIdentifier(name) else { return }
-        self.navigationController!.pushViewController(viewController, animated: true)
-        print("\(name) instantiated")
+    func bubbleViewPressed(segueIdentifier: String) {
+        performSegueWithIdentifier(segueIdentifier, sender: self)
     }
 }
 
 extension MainPageViewController: UIScrollViewDelegate {
     
+}
+
+extension MainPageViewController: UIViewControllerPreviewingDelegate {
+    func previewingContext(previewingContext: UIViewControllerPreviewing, commitViewController viewControllerToCommit: UIViewController) {
+        self.navigationController?.pushViewController(viewControllerToCommit, animated: true)
+    }
+    
+    func previewingContext(previewingContext: UIViewControllerPreviewing, viewControllerForLocation location: CGPoint) -> UIViewController? {
+        print(location)
+        let views = scrollView.bubbles.filter { CGRectContainsPoint($0.frame, location)}
+        if let view = views.first {
+            previewingContext.sourceRect = view.frame
+            
+            print(view.text!.rawValue)
+            let viewController = storyboard?.instantiateViewControllerWithIdentifier(view.text!.rawValue)
+            return viewController
+        }
+        return nil
+    }
 }
 

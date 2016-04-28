@@ -11,8 +11,9 @@ import SafariServices
 
 
 class ResumeViewController: UIViewController {
+    
     override func viewDidLoad() {
-       loadSafariViewControllerWithURL(url)
+        loadSafariViewControllerWithURL(url)
     }
 }
 

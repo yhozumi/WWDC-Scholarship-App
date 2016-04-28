@@ -18,14 +18,15 @@ class MainPageScrollView: UIScrollView {
     
     private(set) var bubbles: [BubbleView] = []
     
-    private let texts: [String] = [
-        "Timeline",
-        "About",
-        "Contact Me",
-        "Projects",
-        "Resumè",
-        "Blog"
+    private let bubbleTexts: [BubbleData] = [
+        BubbleData.Timeline,
+        BubbleData.About,
+        BubbleData.Contact,
+        BubbleData.Resume,
+        BubbleData.Skills,
+        BubbleData.Blog
     ]
+    
     
     private var scrollViewCenter: CGPoint {
         return CGPoint(x: self.contentSize.width / 2, y: self.contentSize.height / 2)
@@ -35,7 +36,7 @@ class MainPageScrollView: UIScrollView {
         super.init(frame: frame)
         
         setUpDynamicAnimator()
-        animator.debugEnabled = false
+        animator.debugEnabled = true
         setUpBubbleViews(frame)
         allowRotationOnViews(bubbles, allowRotation: false)
     }
@@ -90,9 +91,9 @@ class MainPageScrollView: UIScrollView {
         let bubbleSize = CGSize(width: 115.0, height: 115.0)
         let centerPoint = CGPoint(x: (frame.width / 2 - bubbleSize.width / 2) * 1.5, y: (frame.height / 2 - bubbleSize.height) * 1.5)
         let bubbleFrame = CGRect(origin: centerPoint, size: bubbleSize)
-        let _ = texts.map {
-            bubbles.append(BubbleView(frame: bubbleFrame, color: colorPalette[texts.indexOf($0)!],
-                textColor: textColorPalette[texts.indexOf($0)!],
+        let _ = bubbleTexts.map {
+            bubbles.append(BubbleView(frame: bubbleFrame, color: colorPalette[bubbleTexts.indexOf($0)!],
+                textColor: textColorPalette[bubbleTexts.indexOf($0)!],
                 text: $0)) }
         let _ = bubbles.map { self.addSubview($0)
             $0.alpha = 0.0

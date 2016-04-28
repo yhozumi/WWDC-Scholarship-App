@@ -9,14 +9,14 @@
 import UIKit
 
 protocol BubbleViewDelegate: class {
-    func bubbleViewPressed(name: String)
+    func bubbleViewPressed(segueIdentifier: String)
 }
 
 class BubbleView: UIView {
     private var label: UILabel!
     private(set) var color: UIColor?
     private(set) var textColor: UIColor?
-    private(set) var text: String?
+    private(set) var text: BubbleData?
     
     weak var delegate: BubbleViewDelegate?
 
@@ -24,7 +24,7 @@ class BubbleView: UIView {
         return .Ellipse
     }
     
-    convenience init(frame: CGRect, color: UIColor, textColor: UIColor, text: String) {
+    convenience init(frame: CGRect, color: UIColor, textColor: UIColor, text: BubbleData) {
         self.init(frame: frame)
         self.color = color
         self.textColor = textColor
@@ -42,7 +42,7 @@ class BubbleView: UIView {
     
     private func configureLabel() {
         label = UILabel()
-        label.attributedText = NSAttributedString(string: self.text!, attributes: [NSFontAttributeName: UIFont(name: "Menlo-Bold", size: 15.0)!])
+        label.attributedText = NSAttributedString(string: self.text!.rawValue, attributes: [NSFontAttributeName: UIFont(name: "Menlo-Bold", size: 15.0)!])
         label.textColor = textColor
         label.sizeToFit()
         label.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.width / 2)
@@ -59,6 +59,6 @@ class BubbleView: UIView {
     }
     
     func bubbleTapped(tap: UITapGestureRecognizer) {
-        delegate?.bubbleViewPressed(self.text!)
+        delegate?.bubbleViewPressed(self.text!.segueIdentifier)
     }
 }
