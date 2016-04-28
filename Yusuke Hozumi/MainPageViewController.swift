@@ -19,10 +19,11 @@ class MainPageViewController: UIViewController {
         showBubbleViewAndLabel()
         self.view.backgroundColor = UIColor(red: 41.0/255.0, green: 44.0/255.0, blue: 54.0/255.0, alpha: 1.0)
     }
+
     
     private func showBubbleViewAndLabel() {
-        let frame = CGRect(x: self.view.center.x - 57.5, y: self.view.center.y - 57.5, width: 115, height: 115)
-        let bubble = BubbleView(frame: frame, color: UIColor.accentBlueColor(), textColor: UIColor.whiteColor(), text: "Press")
+        let frame = CGRect(x: self.view.center.x - 75, y: self.view.center.y - 75, width: 150, height: 150)
+        let bubble = BubbleView(frame: frame, color: UIColor.accentBlueColor(), textColor: UIColor.whiteColor(), text: "viewWillAppear()")
         bubble.alpha = 0.0
         self.view.addSubview(bubble)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(MainPageViewController.bubbleTapped))

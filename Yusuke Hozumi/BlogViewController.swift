@@ -1,14 +1,14 @@
 //
-//  ProjectsViewController.swift
+//  BlogViewController.swift
 //  Yusuke Hozumi
 //
-//  Created by Suke Hozumi on 4/14/16.
+//  Created by Suke Hozumi on 4/27/16.
 //  Copyright © 2016 Suke Hozumi. All rights reserved.
 //
 
 import UIKit
 
-class ProjectsViewController: UIViewController {
+class BlogViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

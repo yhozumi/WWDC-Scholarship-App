@@ -11,11 +11,13 @@
 		BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02A8411CC9BF0E00E19CD9 /* TimelineCell.swift */; };
 		BA02A8451CC9C0E700E19CD9 /* TimelineLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA02A8441CC9C0E700E19CD9 /* TimelineLayout.swift */; };
 		BA2910FA1CC040090063FE21 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2910F91CC040090063FE21 /* ContactViewController.swift */; };
-		BA2910FC1CC040120063FE21 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2910FB1CC040120063FE21 /* ProjectsViewController.swift */; };
-		BA2910FE1CC0401C0063FE21 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2910FD1CC0401C0063FE21 /* PhotosViewController.swift */; };
 		BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2911031CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift */; };
 		BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2911051CC3DE3E0063FE21 /* MainPageScrollView.swift */; };
 		BA8AA7951CCFE1E400D103EA /* UIColor+ColorScheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7941CCFE1E400D103EA /* UIColor+ColorScheme.swift */; };
+		BA8AA7971CD13AFA00D103EA /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7961CD13AFA00D103EA /* ResumeViewController.swift */; };
+		BA8AA79A1CD13D3500D103EA /* AboutMeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7991CD13D3500D103EA /* AboutMeScrollView.swift */; };
+		BA8AA79C1CD1BC7600D103EA /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA79B1CD1BC7600D103EA /* BlogViewController.swift */; };
+		BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */; };
 		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
 		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
 		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
@@ -51,12 +53,14 @@
 		BA02A8411CC9BF0E00E19CD9 /* TimelineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineCell.swift; sourceTree = "<group>"; };
 		BA02A8441CC9C0E700E19CD9 /* TimelineLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineLayout.swift; sourceTree = "<group>"; };
 		BA2910F91CC040090063FE21 /* ContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
-		BA2910FB1CC040120063FE21 /* ProjectsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
-		BA2910FD1CC0401C0063FE21 /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		BA2911031CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+InvisibleNav.swift"; sourceTree = "<group>"; };
 		BA2911051CC3DE3E0063FE21 /* MainPageScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageScrollView.swift; sourceTree = "<group>"; };
 		BA3FCD291CAB61B6009629AF /* Dynamic-Animator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Dynamic-Animator-Bridging-Header.h"; sourceTree = "<group>"; };
 		BA8AA7941CCFE1E400D103EA /* UIColor+ColorScheme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ColorScheme.swift"; sourceTree = "<group>"; };
+		BA8AA7961CD13AFA00D103EA /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
+		BA8AA7991CD13D3500D103EA /* AboutMeScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeScrollView.swift; sourceTree = "<group>"; };
+		BA8AA79B1CD1BC7600D103EA /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
+		BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillViewController.swift; sourceTree = "<group>"; };
 		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -127,6 +131,14 @@
 			name = Layout;
 			sourceTree = "<group>";
 		};
+		BA8AA7981CD13D0F00D103EA /* About me */ = {
+			isa = PBXGroup;
+			children = (
+				BA8AA7991CD13D3500D103EA /* AboutMeScrollView.swift */,
+			);
+			name = "About me";
+			sourceTree = "<group>";
+		};
 		BACA4AAE1CA9574900940EBA = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 			children = (
 				BA02A83D1CC9BD1A00E19CD9 /* Main Page */,
 				BA02A83E1CC9BD2C00E19CD9 /* Timeline */,
+				BA8AA7981CD13D0F00D103EA /* About me */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -201,8 +214,9 @@
 				BA02A83F1CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift */,
 				BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */,
 				BA2910F91CC040090063FE21 /* ContactViewController.swift */,
-				BA2910FB1CC040120063FE21 /* ProjectsViewController.swift */,
-				BA2910FD1CC0401C0063FE21 /* PhotosViewController.swift */,
+				BA8AA7961CD13AFA00D103EA /* ResumeViewController.swift */,
+				BA8AA79B1CD1BC7600D103EA /* BlogViewController.swift */,
+				BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -356,8 +370,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */,
+				BA8AA7971CD13AFA00D103EA /* ResumeViewController.swift in Sources */,
+				BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */,
 				BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */,
-				BA2910FE1CC0401C0063FE21 /* PhotosViewController.swift in Sources */,
 				BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */,
 				BA8AA7951CCFE1E400D103EA /* UIColor+ColorScheme.swift in Sources */,
 				BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */,
@@ -366,9 +381,10 @@
 				BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */,
 				BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */,
 				BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */,
+				BA8AA79C1CD1BC7600D103EA /* BlogViewController.swift in Sources */,
 				BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */,
+				BA8AA79A1CD13D3500D103EA /* AboutMeScrollView.swift in Sources */,
 				BA2910FA1CC040090063FE21 /* ContactViewController.swift in Sources */,
-				BA2910FC1CC040120063FE21 /* ProjectsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

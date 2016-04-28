@@ -135,10 +135,10 @@
             </objects>
             <point key="canvasLocation" x="3050" y="317"/>
         </scene>
-        <!--About me-->
+        <!--About-->
         <scene sceneID="mO7-RC-loh">
             <objects>
-                <viewController storyboardIdentifier="About Me" id="kAw-oZ-aWT" customClass="AboutMeViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="About" id="kAw-oZ-aWT" customClass="AboutMeViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="24f-Yv-BSm"/>
                         <viewControllerLayoutGuide type="bottom" id="iZi-Ah-jz1"/>
@@ -146,70 +146,165 @@
                     <view key="view" contentMode="scaleToFill" id="hg1-mv-88p">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nYD-V0-uaw">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" red="0.16078431372549018" green="0.17254901960784313" blue="0.21176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nYD-V0-uaw" firstAttribute="leading" secondItem="hg1-mv-88p" secondAttribute="leading" id="Cc9-hA-M3w"/>
+                            <constraint firstItem="iZi-Ah-jz1" firstAttribute="top" secondItem="nYD-V0-uaw" secondAttribute="bottom" id="Vy8-2d-ew4"/>
+                            <constraint firstAttribute="trailing" secondItem="nYD-V0-uaw" secondAttribute="trailing" id="b0y-Xe-tz9"/>
+                            <constraint firstItem="nYD-V0-uaw" firstAttribute="top" secondItem="24f-Yv-BSm" secondAttribute="bottom" id="hBL-GO-h34"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="About me" id="DJe-uO-v5I"/>
+                    <navigationItem key="navigationItem" title="About" id="DJe-uO-v5I"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FGj-9P-9QB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2238" y="1018"/>
         </scene>
-        <!--Projects View Controller-->
-        <scene sceneID="MHN-eo-Pdv">
+        <!--Contact Me-->
+        <scene sceneID="la5-gq-dwe">
             <objects>
-                <viewController storyboardIdentifier="Projects" id="ysI-8V-WgL" customClass="ProjectsViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Contact Me" id="GSb-uV-z4d" customClass="ContactViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pUK-Bi-ewN"/>
-                        <viewControllerLayoutGuide type="bottom" id="50m-Jp-Sma"/>
+                        <viewControllerLayoutGuide type="top" id="6a0-gP-4wI"/>
+                        <viewControllerLayoutGuide type="bottom" id="rJR-QH-HhT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="J0a-ua-Xdh">
+                    <view key="view" contentMode="scaleToFill" id="gSV-Yw-w2M">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="84p-l1-zA1">
+                                <rect key="frame" x="0.0" y="84" width="600" height="496"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sunglasses" translatesAutoresizingMaskIntoConstraints="NO" id="WhL-py-Upj">
+                                        <rect key="frame" x="225" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="RRu-9f-rg3"/>
+                                            <constraint firstAttribute="height" constant="150" id="flO-Nz-33b"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="8eT-TM-qHy">
+                                        <rect key="frame" x="24" y="185" width="552" height="92"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Student/Freelance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PLu-FH-k4G">
+                                                <rect key="frame" x="0.0" y="0.0" width="552" height="20"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Yusuke Hozumi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qfg-Bm-Dlo">
+                                                <rect key="frame" x="0.0" y="24" width="552" height="20"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="(614) 404-3856" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFA-MW-dpe">
+                                                <rect key="frame" x="0.0" y="48" width="552" height="20"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="yusuke.hozumi@icloud.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lpn-C6-dB9">
+                                                <rect key="frame" x="0.0" y="72" width="552" height="20"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Feel free to contact me anytime to talk about Swift/Objective-C or Cocoa Development. I'm always excited to talk and chat! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AY7-B1-Ohk">
+                                        <rect key="frame" x="32" y="312" width="536" height="60"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcs-RG-vyU">
+                                        <rect key="frame" x="234" y="407" width="133" height="90"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="20"/>
+                                        <state key="normal" title="Let's Chat!">
+                                            <color key="titleColor" red="0.76078431369999999" green="0.23137254900000001" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="emailButtonPressed:" destination="GSb-uV-z4d" eventType="touchUpInside" id="WKe-Ke-2DL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="8eT-TM-qHy" secondAttribute="trailing" constant="24" id="53Z-Xv-xg3"/>
+                                    <constraint firstItem="WhL-py-Upj" firstAttribute="top" secondItem="84p-l1-zA1" secondAttribute="topMargin" constant="12" id="Azi-nc-QmG"/>
+                                    <constraint firstItem="AY7-B1-Ohk" firstAttribute="leading" secondItem="84p-l1-zA1" secondAttribute="leading" constant="32" id="Xlz-di-Vtq"/>
+                                    <constraint firstItem="8eT-TM-qHy" firstAttribute="leading" secondItem="84p-l1-zA1" secondAttribute="leading" constant="24" id="ijy-dR-fk0"/>
+                                    <constraint firstItem="WhL-py-Upj" firstAttribute="top" secondItem="84p-l1-zA1" secondAttribute="top" constant="12" id="lEc-rv-L0M"/>
+                                    <constraint firstAttribute="trailing" secondItem="AY7-B1-Ohk" secondAttribute="trailing" constant="32" id="mDK-gT-wTP"/>
+                                    <constraint firstItem="8eT-TM-qHy" firstAttribute="top" secondItem="WhL-py-Upj" secondAttribute="bottom" constant="20" id="xBO-cZ-E15"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="xBO-cZ-E15"/>
+                                        <exclude reference="Azi-nc-QmG"/>
+                                        <exclude reference="lEc-rv-L0M"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.17254901959999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="84p-l1-zA1" secondAttribute="trailing" id="D7i-0X-BDp"/>
+                            <constraint firstItem="84p-l1-zA1" firstAttribute="leading" secondItem="gSV-Yw-w2M" secondAttribute="leading" id="MQ2-Zr-Rcb"/>
+                            <constraint firstItem="84p-l1-zA1" firstAttribute="top" secondItem="6a0-gP-4wI" secondAttribute="bottom" constant="20" id="NcL-xt-ECd"/>
+                            <constraint firstItem="rJR-QH-HhT" firstAttribute="top" secondItem="84p-l1-zA1" secondAttribute="bottom" constant="20" id="xzT-Rf-NSI"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="KWb-5S-mra"/>
+                    <navigationItem key="navigationItem" title="Contact Me" id="eC2-2U-hkr"/>
+                    <connections>
+                        <outlet property="contactImageView" destination="WhL-py-Upj" id="NO0-BW-YPt"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="27T-DS-dBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c1l-rn-FpM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3088" y="1680"/>
+            <point key="canvasLocation" x="3088" y="2361"/>
         </scene>
-        <!--Contact View Controller-->
-        <scene sceneID="JAu-Ux-q4L">
+        <!--Resume View Controller-->
+        <scene sceneID="98R-vf-kGa">
             <objects>
-                <viewController storyboardIdentifier="Contact" id="Qdp-jF-0c1" customClass="ContactViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Resumè" id="bUN-Wl-II4" customClass="ResumeViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zV9-hd-Xvb"/>
-                        <viewControllerLayoutGuide type="bottom" id="jkK-Hm-LjD"/>
+                        <viewControllerLayoutGuide type="top" id="kPO-pP-3IP"/>
+                        <viewControllerLayoutGuide type="bottom" id="sWx-kO-nOC"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="aFG-uG-7Fv">
+                    <view key="view" userInteractionEnabled="NO" contentMode="scaleToFill" id="uhf-4C-4iV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.17254901959999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vmu-5N-oNS"/>
+                    <navigationItem key="navigationItem" id="bph-cK-Odw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Rl6-6P-SbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6G-xv-Thy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3092" y="2366"/>
+            <point key="canvasLocation" x="3078" y="3074"/>
         </scene>
-        <!--Photos View Controller-->
-        <scene sceneID="3nT-s1-Fep">
+        <!--Skill View Controller-->
+        <scene sceneID="a0o-1a-PNX">
             <objects>
-                <viewController storyboardIdentifier="Photos" id="70K-O2-CnT" customClass="PhotosViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GdP-KB-2bU" customClass="SkillViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="e8p-Q2-fcE"/>
-                        <viewControllerLayoutGuide type="bottom" id="da5-cS-eRo"/>
+                        <viewControllerLayoutGuide type="top" id="qje-7N-6hR"/>
+                        <viewControllerLayoutGuide type="bottom" id="oIa-Zg-FaE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="CvP-De-Hq8">
+                    <view key="view" contentMode="scaleToFill" id="TZs-5q-opg">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.16078431369999999" green="0.17254901959999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="0lB-Oi-AC1"/>
+                    <navigationItem key="navigationItem" id="n2G-TM-juO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Yyy-jI-WFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5z-xg-ffR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3128" y="3070"/>
+            <point key="canvasLocation" x="3890" y="3792"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="MXH-WG-9wI">
@@ -247,23 +342,24 @@
             </objects>
             <point key="canvasLocation" x="-652" y="317"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="lp7-4g-8gz">
+        <!--Blog View Controller-->
+        <scene sceneID="WDr-CG-obT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CAR-J6-aHy" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RZL-Cq-zQM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="ysI-8V-WgL" kind="relationship" relationship="rootViewController" id="pI2-88-U2S"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tds-9g-vnZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="dpX-dW-dQp" customClass="BlogViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="esH-ae-QHE"/>
+                        <viewControllerLayoutGuide type="bottom" id="PIa-mR-7VI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pzH-cs-hXl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dG8-Pu-llb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bm9-6R-Cl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2276" y="1680"/>
+            <point key="canvasLocation" x="3078" y="1660"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="T3A-xg-sFV">
@@ -276,30 +372,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Qdp-jF-0c1" kind="relationship" relationship="rootViewController" id="fx6-Nj-bCB"/>
+                        <segue destination="GSb-uV-z4d" kind="relationship" relationship="rootViewController" id="ExP-ce-UOd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vic-q0-VAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2280" y="2366"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Ak3-kU-enh">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y3X-Rs-0L0" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZLZ-4x-baa">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="70K-O2-CnT" kind="relationship" relationship="rootViewController" id="YzR-PZ-hPs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dg3-6l-acl" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2316" y="3070"/>
         </scene>
         <!--Navigation Controller Invisible Nav-->
         <scene sceneID="DhY-41-RYt">
@@ -319,5 +397,26 @@
             </objects>
             <point key="canvasLocation" x="2238" y="317"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YOE-tj-yzI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fhg-tH-NXb" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mP5-zs-B0s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GdP-KB-2bU" kind="relationship" relationship="rootViewController" id="B5L-Lc-4VD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i23-6s-Tyc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3078" y="3792"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="sunglasses" width="150" height="150"/>
+    </resources>
 </document>

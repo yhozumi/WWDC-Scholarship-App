@@ -20,11 +20,11 @@ class MainPageScrollView: UIScrollView {
     
     private let texts: [String] = [
         "Timeline",
-        "About Me",
-        "Contact",
+        "About",
+        "Contact Me",
         "Projects",
-        "Photos",
-        "Schedule"
+        "Resumè",
+        "Blog"
     ]
     
     private var scrollViewCenter: CGPoint {
