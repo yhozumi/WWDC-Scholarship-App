@@ -38,6 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let mainVC = navigationVC.viewControllers.first as! MainPageViewController
         mainVC.performSegueWithIdentifier(name.segueIdentifier, sender: self)
     }
+    
+    func applicationDidEnterBackground(application: UIApplication) {
+        let navigationVC = window?.rootViewController as! UINavigationController
+        navigationVC.popViewControllerAnimated(true)
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -59,6 +64,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return
         }
     }
-
 }
 

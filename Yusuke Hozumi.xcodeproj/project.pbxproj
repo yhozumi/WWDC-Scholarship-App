@@ -19,6 +19,7 @@
 		BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */; };
 		BA8AA7A31CD1BDBF00D103EA /* SafariViewControllerViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A21CD1BDBF00D103EA /* SafariViewControllerViewable.swift */; };
 		BA8AA7A51CD1DABD00D103EA /* BubbleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A41CD1DABD00D103EA /* BubbleData.swift */; };
+		BA8AA7A81CD26FFD00D103EA /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A71CD26FFD00D103EA /* SkillsView.swift */; };
 		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
 		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
 		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillViewController.swift; sourceTree = "<group>"; };
 		BA8AA7A21CD1BDBF00D103EA /* SafariViewControllerViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewControllerViewable.swift; sourceTree = "<group>"; };
 		BA8AA7A41CD1DABD00D103EA /* BubbleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleData.swift; sourceTree = "<group>"; };
+		BA8AA7A71CD26FFD00D103EA /* SkillsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +150,14 @@
 			name = Protocol;
 			sourceTree = "<group>";
 		};
+		BA8AA7A61CD26FDC00D103EA /* Skill */ = {
+			isa = PBXGroup;
+			children = (
+				BA8AA7A71CD26FFD00D103EA /* SkillsView.swift */,
+			);
+			name = Skill;
+			sourceTree = "<group>";
+		};
 		BACA4AAE1CA9574900940EBA = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +212,7 @@
 		BADD0B721CA9602000E8FB83 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA8AA7A61CD26FDC00D103EA /* Skill */,
 				BA02A83D1CC9BD1A00E19CD9 /* Main Page */,
 				BA02A83E1CC9BD2C00E19CD9 /* Timeline */,
 				BA8AA7981CD13D0F00D103EA /* About me */,
@@ -392,6 +403,7 @@
 				BA8AA7A51CD1DABD00D103EA /* BubbleData.swift in Sources */,
 				BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */,
 				BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */,
+				BA8AA7A81CD26FFD00D103EA /* SkillsView.swift in Sources */,
 				BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */,
 				BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */,
 				BA8AA79C1CD1BC7600D103EA /* BlogViewController.swift in Sources */,

@@ -36,7 +36,7 @@ class MainPageScrollView: UIScrollView {
         super.init(frame: frame)
         
         setUpDynamicAnimator()
-        animator.debugEnabled = true
+        animator.debugEnabled = false
         setUpBubbleViews(frame)
         allowRotationOnViews(bubbles, allowRotation: false)
     }
