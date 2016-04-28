@@ -11,20 +11,14 @@ import SafariServices
 
 
 class ResumeViewController: UIViewController {
-
-    private let url: NSURL? = NSURL(string:
-        "https://www.yusukehozumi.com")
-    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        guard let url = url else { return }
-        loadSafariViewController(url)
+       loadSafariViewControllerWithURL(url)
     }
-    
-    private func loadSafariViewController(url: NSURL) {
-        let safariVC = SFSafariViewController(URL: url, entersReaderIfAvailable: true)
-        safariVC.delegate = self
-        presentViewController(safariVC, animated: false, completion: nil)
+}
+
+extension ResumeViewController: SafariViewControllerViewable {
+    var url: NSURL {
+        return NSURL(string: "http://www.yusukehozumi.com")!
     }
 }
 

@@ -18,6 +18,7 @@
 		BA8AA79A1CD13D3500D103EA /* AboutMeScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7991CD13D3500D103EA /* AboutMeScrollView.swift */; };
 		BA8AA79C1CD1BC7600D103EA /* BlogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA79B1CD1BC7600D103EA /* BlogViewController.swift */; };
 		BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */; };
+		BA8AA7A31CD1BDBF00D103EA /* SafariViewControllerViewable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A21CD1BDBF00D103EA /* SafariViewControllerViewable.swift */; };
 		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
 		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
 		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
@@ -61,6 +62,7 @@
 		BA8AA7991CD13D3500D103EA /* AboutMeScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeScrollView.swift; sourceTree = "<group>"; };
 		BA8AA79B1CD1BC7600D103EA /* BlogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlogViewController.swift; sourceTree = "<group>"; };
 		BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillViewController.swift; sourceTree = "<group>"; };
+		BA8AA7A21CD1BDBF00D103EA /* SafariViewControllerViewable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariViewControllerViewable.swift; sourceTree = "<group>"; };
 		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			name = "About me";
 			sourceTree = "<group>";
 		};
+		BA8AA79F1CD1BD7E00D103EA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				BA8AA7A21CD1BDBF00D103EA /* SafariViewControllerViewable.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		BACA4AAE1CA9574900940EBA = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +176,7 @@
 				BADD0B731CA9602500E8FB83 /* Model */,
 				BADD0B721CA9602000E8FB83 /* View */,
 				BADD0B741CA9602C00E8FB83 /* View Controller */,
+				BA8AA79F1CD1BD7E00D103EA /* Protocol */,
 				BADD0B751CA9604600E8FB83 /* Support */,
 			);
 			path = "Yusuke Hozumi";
@@ -372,6 +383,7 @@
 				BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */,
 				BA8AA7971CD13AFA00D103EA /* ResumeViewController.swift in Sources */,
 				BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */,
+				BA8AA7A31CD1BDBF00D103EA /* SafariViewControllerViewable.swift in Sources */,
 				BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */,
 				BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */,
 				BA8AA7951CCFE1E400D103EA /* UIColor+ColorScheme.swift in Sources */,

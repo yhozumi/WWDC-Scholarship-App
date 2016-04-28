@@ -290,7 +290,7 @@
         <!--Skill View Controller-->
         <scene sceneID="a0o-1a-PNX">
             <objects>
-                <viewController id="GdP-KB-2bU" customClass="SkillViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Skill" id="GdP-KB-2bU" customClass="SkillViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qje-7N-6hR"/>
                         <viewControllerLayoutGuide type="bottom" id="oIa-Zg-FaE"/>
@@ -345,7 +345,7 @@
         <!--Blog View Controller-->
         <scene sceneID="WDr-CG-obT">
             <objects>
-                <viewController id="dpX-dW-dQp" customClass="BlogViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Blog" id="dpX-dW-dQp" customClass="BlogViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="esH-ae-QHE"/>
                         <viewControllerLayoutGuide type="bottom" id="PIa-mR-7VI"/>
