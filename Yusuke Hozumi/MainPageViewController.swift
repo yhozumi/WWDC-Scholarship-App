@@ -10,9 +10,8 @@ import UIKit
 
 class MainPageViewController: UIViewController {
     private var scrollView: MainPageScrollView!
-    private var animator: UIDynamicAnimator!
-    @IBOutlet weak var helloLabel: UILabel!
-    
+    private var animator: UIDynamicAnimator!    
+    @IBOutlet weak var labelStackView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +29,8 @@ class MainPageViewController: UIViewController {
         bubble.addGestureRecognizer(tapGesture)
         
         UIView.animateWithDuration(1.0, animations: {
+            self.labelStackView.alpha = 1.0
             bubble.alpha = 1.0
-            self.helloLabel.alpha = 1.0
         })
     }
     

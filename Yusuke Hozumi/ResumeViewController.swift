@@ -19,7 +19,7 @@ class ResumeViewController: UIViewController {
 
 extension ResumeViewController: SafariViewControllerViewable {
     var url: NSURL {
-        return NSURL(string: "http://www.yusukehozumi.com")!
+        return NSURL(string: "https://docs.google.com/document/d/13AkD6gQbx8vb_v9zjXGsTAzUGo1Q_c6XiKxAejnpKyU/edit?usp=sharing")!
     }
 }
 

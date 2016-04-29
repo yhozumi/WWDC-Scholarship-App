@@ -29,7 +29,7 @@ class TimelineCell: UICollectionViewCell {
         
         let delta = 1 - ((mainHeight - CGRectGetHeight(frame)) / (mainHeight - regularHeight))
         
-        let minFilterAlpha: CGFloat = 0.25
+        let minFilterAlpha: CGFloat = 0.45
         let maxFilterAlpha: CGFloat = 0.75
     
         let minTextAlpha: CGFloat = 0.4

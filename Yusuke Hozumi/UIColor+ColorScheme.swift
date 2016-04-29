@@ -39,6 +39,6 @@ extension UIColor {
     }
     
     static func bubbleTextColorPalette() -> [UIColor] {
-        return [UIColor.accentOrangeColor(), UIColor.commentGreenColor(), UIColor.accentRedColor(), UIColor.accentPurpleColor(), UIColor.whiteColor(), UIColor.accentBlueColor()]
+        return [UIColor.accentRedColor(), UIColor.commentGreenColor(), UIColor.accentOrangeColor(), UIColor.accentPurpleColor(), UIColor.whiteColor(), UIColor.accentBlueColor()]
     }
 }
