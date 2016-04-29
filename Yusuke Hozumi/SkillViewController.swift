@@ -96,20 +96,19 @@ extension SkillViewController: SkillsViewDelegate {
         UIView.animateWithDuration(0.5, animations: {
             let _ = viewsCopy.map { $0.filterView!.alpha = 0.0 }
             self.descriptionLabel.alpha = 0.0
+            }, completion: { _ in
+                let index = viewsCopy.indexOf(view)
+                if let index = index {
+                    viewsCopy.removeAtIndex(index)
+                    let _ = viewsCopy.map { view in
+                        UIView.animateWithDuration(0.5, animations: {
+                            view.filterView!.alpha = 0.5
+                            self.descriptionLabel.alpha = 1.0
+                        })
+                    }
+                }
+                self.descriptionLabel.text = view.skill?.description
         })
-        
-        
-        let index = viewsCopy.indexOf(view)
-        if let index = index {
-            viewsCopy.removeAtIndex(index)
-            let _ = viewsCopy.map { view in
-                UIView.animateWithDuration(0.5, animations: {
-                    view.filterView!.alpha = 0.5
-                    self.descriptionLabel.alpha = 1.0
-                })
-            }
-        }
-        descriptionLabel.text = view.skill?.description
     }
     
     func skillsViewAnimationEnded(view: SkillsView) {
