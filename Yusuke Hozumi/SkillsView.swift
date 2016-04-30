@@ -39,7 +39,6 @@ class SkillsView: UIView {
     override func drawRect(rect: CGRect) {
         super.drawRect(rect)
         configureHeightAimation()
-        setUpTapGesture()
     }
     
     private func configureFilterView() {
@@ -91,5 +90,6 @@ class SkillsView: UIView {
 extension SkillsView {
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         configureNameLabel()
+        setUpTapGesture()
     }
 }

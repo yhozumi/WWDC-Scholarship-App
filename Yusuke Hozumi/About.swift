@@ -29,7 +29,7 @@ enum About: String {
     
     var image: UIImage {
         switch self {
-        case .Personal: return UIImage()
+        case .Personal: return UIImage(named: "kenz")!
         case .Work: return UIImage()
         case .Code: return UIImage()
         case .Hobby: return UIImage()
