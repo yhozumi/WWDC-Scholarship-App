@@ -23,7 +23,7 @@ enum Skills: String {
         case .CSharp:
             return "C# is the first programming language I learned. I took a class on beginning programming course. C# tought me how to write Object-Oriented programming"
         case .ObjectiveC:
-            return "I spend a little bit of time learning Objective-C since Swift is still new not all companies and projects are done on Swift. Objective-C is unique and a lot of people stay away from this language because it's very different but once you understand the syntax it's an amazing language."
+            return "I spent a little bit of time learning Objective-C since Swift is still new not all companies and projects are done on Swift. Objective-C is unique and a lot of people stay away from this language because it's very different but once you understand the syntax it's an amazing language."
         case .CPlusPlus:
             return "Took some time looking over iTunes U courses for C and C++."
         case .Python:

@@ -21,6 +21,8 @@
 		BA8AA7A51CD1DABD00D103EA /* BubbleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A41CD1DABD00D103EA /* BubbleData.swift */; };
 		BA8AA7A81CD26FFD00D103EA /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A71CD26FFD00D103EA /* SkillsView.swift */; };
 		BA8AA7AA1CD2F30B00D103EA /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A91CD2F30B00D103EA /* Skills.swift */; };
+		BA8AA7AD1CD3CCA100D103EA /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7AC1CD3CCA100D103EA /* AboutView.swift */; };
+		BA8AA7AF1CD3CF4800D103EA /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7AE1CD3CF4800D103EA /* About.swift */; };
 		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
 		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
 		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
@@ -67,6 +69,8 @@
 		BA8AA7A41CD1DABD00D103EA /* BubbleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleData.swift; sourceTree = "<group>"; };
 		BA8AA7A71CD26FFD00D103EA /* SkillsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		BA8AA7A91CD2F30B00D103EA /* Skills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
+		BA8AA7AC1CD3CCA100D103EA /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		BA8AA7AE1CD3CF4800D103EA /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -137,11 +141,12 @@
 			name = Layout;
 			sourceTree = "<group>";
 		};
-		BA8AA7981CD13D0F00D103EA /* About me */ = {
+		BA8AA7981CD13D0F00D103EA /* About */ = {
 			isa = PBXGroup;
 			children = (
+				BA8AA7AC1CD3CCA100D103EA /* AboutView.swift */,
 			);
-			name = "About me";
+			name = About;
 			sourceTree = "<group>";
 		};
 		BA8AA79F1CD1BD7E00D103EA /* Protocol */ = {
@@ -217,7 +222,7 @@
 				BA8AA7A61CD26FDC00D103EA /* Skill */,
 				BA02A83D1CC9BD1A00E19CD9 /* Main Page */,
 				BA02A83E1CC9BD2C00E19CD9 /* Timeline */,
-				BA8AA7981CD13D0F00D103EA /* About me */,
+				BA8AA7981CD13D0F00D103EA /* About */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */,
 				BA8AA7A41CD1DABD00D103EA /* BubbleData.swift */,
 				BA8AA7A91CD2F30B00D103EA /* Skills.swift */,
+				BA8AA7AE1CD3CF4800D103EA /* About.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -398,6 +404,7 @@
 				BA8AA7971CD13AFA00D103EA /* ResumeViewController.swift in Sources */,
 				BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */,
 				BA8AA7A31CD1BDBF00D103EA /* SafariViewControllerViewable.swift in Sources */,
+				BA8AA7AD1CD3CCA100D103EA /* AboutView.swift in Sources */,
 				BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */,
 				BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */,
 				BA8AA7AA1CD2F30B00D103EA /* Skills.swift in Sources */,
@@ -409,6 +416,7 @@
 				BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */,
 				BA8AA7A81CD26FFD00D103EA /* SkillsView.swift in Sources */,
 				BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */,
+				BA8AA7AF1CD3CF4800D103EA /* About.swift in Sources */,
 				BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */,
 				BA8AA79C1CD1BC7600D103EA /* BlogViewController.swift in Sources */,
 				BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */,

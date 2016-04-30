@@ -9,27 +9,31 @@
 import UIKit
 
 class AboutMeViewController: UIViewController {
-
+    
+    private var scrollView: UIScrollView!
+    private let margin: CGFloat = 20
+    
+    private let abouts = About.arrayOfAbouts()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        configureScrollView()
+        
+        let size = CGSize(width: self.view.frame.width - margin, height: self.view.frame.width - margin)
+        let frame = CGRect(origin: CGPoint(x: self.view.bounds.origin.x, y: self.view.bounds.origin.y), size: size)
+        let view = AboutView(frame: frame, about: abouts[0])
+        view.center.y = scrollView.center.y
+        self.view.addSubview(view)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func configureScrollView() {
+        let origin = CGPointZero
+        let size = CGSize(width: self.view.frame.width - margin, height: self.view.frame.width)
+        scrollView = UIScrollView(frame: CGRect(origin: origin, size: size))
+        scrollView.contentSize = CGSize(width: (self.view.frame.width * 4) - (margin * 8), height: size.height - margin * 4)
+        scrollView.layer.cornerRadius = scrollView.bounds.width / 2
+        scrollView.center = self.view.center
+        scrollView.backgroundColor = UIColor.whiteColor()
+        self.view.addSubview(scrollView)
     }
-    */
-
 }
