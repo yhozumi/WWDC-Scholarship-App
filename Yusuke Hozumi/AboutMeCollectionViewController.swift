@@ -20,11 +20,8 @@ class AboutMeCollectionViewController: UICollectionViewController {
     
     private var categoryText: String? {
         didSet {
-            categoryLabel.attributedText = NSAttributedString(string: categoryText!, attributes: [NSFontAttributeName: UIFont(name: "Menlo", size: 25)!])
-            categoryLabel.sizeToFit()
-            categoryLabel.center = CGPoint(x: self.view.center.x, y: self.view.center.x - midYPoint!)
-            categoryLabel.textColor = abouts[currentPage].color
-            UIView.animateWithDuration(0.5, animations: {
+            adjustCategoryLabelWithText(categoryText!)
+            UIView.animateWithDuration(1.0, animations: {
                 self.categoryLabel.alpha = 1.0
             })
         }
@@ -38,6 +35,13 @@ class AboutMeCollectionViewController: UICollectionViewController {
         
         categoryText = abouts[currentPage].rawValue
         self.title = "About"
+    }
+    
+    private func adjustCategoryLabelWithText(text: String) {
+        categoryLabel.attributedText = NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont(name: "Menlo", size: 25)!])
+        categoryLabel.sizeToFit()
+        categoryLabel.center = CGPoint(x: self.view.center.x, y: self.view.center.x - midYPoint!)
+        categoryLabel.textColor = abouts[currentPage].color
     }
     
     private func configureCategoryLabel() {
@@ -97,5 +101,11 @@ extension AboutMeCollectionViewController: UICollectionViewDelegateFlowLayout {
         pageControl?.currentPage = currentPage
         
         categoryText = abouts[currentPage].rawValue
+    }
+    
+    override func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        UIView.animateWithDuration(1.0, animations: {
+            self.categoryLabel.alpha = 0.0
+        })
     }
 }
