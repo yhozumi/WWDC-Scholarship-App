@@ -36,6 +36,15 @@ enum About: String {
         }
     }
     
+    var color: UIColor {
+        switch self {
+        case .Personal: return UIColor.accentOrangeColor()
+        case .Work: return UIColor.accentPurpleColor()
+        case .Code: return UIColor.accentRedColor()
+        case .Hobby: return UIColor.accentBlueColor()
+        }
+    }
+    
     static func arrayOfAbouts() -> [About] {
         return [ About.Personal, About.Work, About.Code, About.Hobby ]
     }

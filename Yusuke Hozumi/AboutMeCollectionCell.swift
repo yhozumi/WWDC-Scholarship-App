@@ -10,8 +10,9 @@ import UIKit
 
 class AboutMeCollectionCell: UICollectionViewCell {
     
-    @IBOutlet weak var descriptionLabel: UILabel!
+
     @IBOutlet weak var aboutImageView: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
     
     private var blurEffectView: UIVisualEffectView?
     
@@ -31,7 +32,6 @@ class AboutMeCollectionCell: UICollectionViewCell {
         self.layer.cornerRadius = self.frame.width / 2 + margin
         descriptionLabel.alpha = 0.0
         configureTapGesture()
-        configureBlurEffectWithEffectType(.Dark)
     }
     
     private func configureTapGesture() {
@@ -51,7 +51,7 @@ class AboutMeCollectionCell: UICollectionViewCell {
     
     func imageTapped() {
         if blurEffectView == nil {
-            blurEffectView = configureBlurEffectWithEffectType(.Light)
+            blurEffectView = configureBlurEffectWithEffectType(.Dark)
             UIView.animateWithDuration(0.5, animations: {
                 self.blurEffectView!.alpha = 1.0
                 self.descriptionLabel.alpha = 1.0
