@@ -21,8 +21,9 @@
 		BA8AA7A51CD1DABD00D103EA /* BubbleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A41CD1DABD00D103EA /* BubbleData.swift */; };
 		BA8AA7A81CD26FFD00D103EA /* SkillsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A71CD26FFD00D103EA /* SkillsView.swift */; };
 		BA8AA7AA1CD2F30B00D103EA /* Skills.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7A91CD2F30B00D103EA /* Skills.swift */; };
-		BA8AA7AD1CD3CCA100D103EA /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7AC1CD3CCA100D103EA /* AboutView.swift */; };
 		BA8AA7AF1CD3CF4800D103EA /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7AE1CD3CF4800D103EA /* About.swift */; };
+		BA8AA7B11CD57B7900D103EA /* AboutMeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7B01CD57B7900D103EA /* AboutMeCollectionViewController.swift */; };
+		BA8AA7B31CD57C3800D103EA /* AboutMeCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8AA7B21CD57C3800D103EA /* AboutMeCollectionCell.swift */; };
 		BACA4ABB1CA9574900940EBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BACA4ABA1CA9574900940EBA /* AppDelegate.swift */; };
 		BACA4AC01CA9574900940EBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BACA4ABE1CA9574900940EBA /* Main.storyboard */; };
 		BACA4AC21CA9574900940EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BACA4AC11CA9574900940EBA /* Assets.xcassets */; };
@@ -33,7 +34,6 @@
 		BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */; };
 		BAF0F13C1CCCFF190047A07F /* TimelineEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */; };
 		BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */; };
-		BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +69,9 @@
 		BA8AA7A41CD1DABD00D103EA /* BubbleData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BubbleData.swift; sourceTree = "<group>"; };
 		BA8AA7A71CD26FFD00D103EA /* SkillsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SkillsView.swift; sourceTree = "<group>"; };
 		BA8AA7A91CD2F30B00D103EA /* Skills.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Skills.swift; sourceTree = "<group>"; };
-		BA8AA7AC1CD3CCA100D103EA /* AboutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		BA8AA7AE1CD3CF4800D103EA /* About.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		BA8AA7B01CD57B7900D103EA /* AboutMeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeCollectionViewController.swift; sourceTree = "<group>"; };
+		BA8AA7B21CD57C3800D103EA /* AboutMeCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeCollectionCell.swift; sourceTree = "<group>"; };
 		BACA4AB71CA9574900940EBA /* Yusuke Hozumi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Yusuke Hozumi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BACA4ABA1CA9574900940EBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BACA4ABF1CA9574900940EBA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -87,7 +88,6 @@
 		BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = TimelineEvents.json; sourceTree = "<group>"; };
 		BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEvent.swift; sourceTree = "<group>"; };
-		BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,7 +144,7 @@
 		BA8AA7981CD13D0F00D103EA /* About */ = {
 			isa = PBXGroup;
 			children = (
-				BA8AA7AC1CD3CCA100D103EA /* AboutView.swift */,
+				BA8AA7B21CD57C3800D103EA /* AboutMeCollectionCell.swift */,
 			);
 			name = About;
 			sourceTree = "<group>";
@@ -243,11 +243,11 @@
 			children = (
 				BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */,
 				BA02A83F1CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift */,
-				BAF60A4E1CBF3BA3002B96C2 /* AboutMeViewController.swift */,
 				BA2910F91CC040090063FE21 /* ContactViewController.swift */,
 				BA8AA7961CD13AFA00D103EA /* ResumeViewController.swift */,
 				BA8AA79B1CD1BC7600D103EA /* BlogViewController.swift */,
 				BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */,
+				BA8AA7B01CD57B7900D103EA /* AboutMeCollectionViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -404,15 +404,15 @@
 				BA8AA7971CD13AFA00D103EA /* ResumeViewController.swift in Sources */,
 				BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */,
 				BA8AA7A31CD1BDBF00D103EA /* SafariViewControllerViewable.swift in Sources */,
-				BA8AA7AD1CD3CCA100D103EA /* AboutView.swift in Sources */,
 				BA2911061CC3DE3E0063FE21 /* MainPageScrollView.swift in Sources */,
 				BA02A8401CC9BE4E00E19CD9 /* TimelineCollectionViewController.swift in Sources */,
 				BA8AA7AA1CD2F30B00D103EA /* Skills.swift in Sources */,
+				BA8AA7B11CD57B7900D103EA /* AboutMeCollectionViewController.swift in Sources */,
+				BA8AA7B31CD57C3800D103EA /* AboutMeCollectionCell.swift in Sources */,
 				BA8AA7951CCFE1E400D103EA /* UIColor+ColorScheme.swift in Sources */,
 				BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */,
 				BA02A8451CC9C0E700E19CD9 /* TimelineLayout.swift in Sources */,
 				BA8AA7A51CD1DABD00D103EA /* BubbleData.swift in Sources */,
-				BAF60A4F1CBF3BA3002B96C2 /* AboutMeViewController.swift in Sources */,
 				BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */,
 				BA8AA7A81CD26FFD00D103EA /* SkillsView.swift in Sources */,
 				BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */,

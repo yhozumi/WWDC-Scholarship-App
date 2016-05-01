@@ -25,10 +25,10 @@ class AboutMeViewController: UIViewController {
         let aboutView = AboutView(frame: frame, about: abouts[0])
         scrollView.addSubview(aboutView)
         
-        let secondFrame = CGRect(origin: CGPoint(x: scrollView.frame.width , y: 0), size: CGSize(width: scrollView.frame.width, height: scrollView.frame.width))
-        let secondView = AboutView(frame: secondFrame, about: abouts[1])
+        let secondView = AboutView(frame: frame, about: abouts[1])
+        secondView.frame.origin.x = self.view.frame.width - margin
         scrollView.addSubview(secondView)
-        
+    
     }
     
     private func configureScrollView() {
@@ -40,9 +40,17 @@ class AboutMeViewController: UIViewController {
         scrollView.center = self.view.center
         scrollView.layer.cornerRadius = scrollView.frame.width / 2
         scrollView.showsHorizontalScrollIndicator = false
+        scrollView.backgroundColor = UIColor.darkBackGroundColor()
+        scrollView.pagingEnabled = true
+        scrollView.delegate = self
         
         print("scrollView center \(scrollView.center), scrollView frame origin \(scrollView.frame.origin)")
-        scrollView.backgroundColor = UIColor.whiteColor()
         self.view.addSubview(scrollView)
+    }
+}
+
+extension AboutMeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        
     }
 }

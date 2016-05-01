@@ -30,9 +30,9 @@ enum About: String {
     var image: UIImage {
         switch self {
         case .Personal: return UIImage(named: "kenz")!
-        case .Work: return UIImage()
-        case .Code: return UIImage()
-        case .Hobby: return UIImage()
+        case .Work: return UIImage(named: "work")!
+        case .Code: return UIImage(named: "code")!
+        case .Hobby: return UIImage(named: "hobby")!
         }
     }
     
