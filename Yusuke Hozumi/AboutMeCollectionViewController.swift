@@ -17,6 +17,7 @@ class AboutMeCollectionViewController: UICollectionViewController {
     private var currentPage: Int = 0
     private var categoryLabel: UILabel!
     private var midYPoint: CGFloat?
+    private var tapCount: Int = 0
     
     private var categoryText: String? {
         didSet {
@@ -35,10 +36,12 @@ class AboutMeCollectionViewController: UICollectionViewController {
         
         categoryText = abouts[currentPage].rawValue
         self.title = "About"
+        
+        configureHiddenView()
     }
     
     private func adjustCategoryLabelWithText(text: String) {
-        categoryLabel.attributedText = NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont(name: "Menlo", size: 25)!])
+        categoryLabel.attributedText = NSAttributedString(string: text, attributes: [NSFontAttributeName: UIFont(name: "Menlo", size: 30)!])
         categoryLabel.sizeToFit()
         categoryLabel.center = CGPoint(x: self.view.center.x, y: self.view.center.x - midYPoint!)
         categoryLabel.textColor = abouts[currentPage].color
@@ -64,6 +67,25 @@ class AboutMeCollectionViewController: UICollectionViewController {
         let centerY = self.view.center.y
         let cellRadius = (self.view.frame.width - margin) / 2
         midYPoint = (maxY - (centerY + cellRadius)) / 2
+    }
+    
+    private func configureHiddenView() {
+        let origin = CGPoint(x: self.view.frame.width - 50, y: self.view.frame.maxY - 50)
+        let hiddenView = UIView(frame: CGRect(origin: origin, size: CGSize(width: 50, height: 50)))
+        hiddenView.backgroundColor = UIColor.darkBackGroundColor()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(AboutMeCollectionViewController.hiddenTapped))
+        hiddenView.addGestureRecognizer(tapGesture)
+        self.view.insertSubview(hiddenView, aboveSubview: collectionView!)
+    }
+    
+    func hiddenTapped() {
+        print("hidden tapped")
+        tapCount += 1
+        if tapCount == 5 {
+            performSegueWithIdentifier("showHidden", sender: self)
+            tapCount = 0
+        }
     }
 }
 

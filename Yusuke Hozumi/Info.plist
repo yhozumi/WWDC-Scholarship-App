@@ -6,7 +6,7 @@
 	<array>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string></string>
+			<string>timeline</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Timeline</string>
 			<key>UIApplicationShortcutItemType</key>
@@ -14,7 +14,7 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string></string>
+			<string>user</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>About</string>
 			<key>UIApplicationShortcutItemType</key>
@@ -22,7 +22,7 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string></string>
+			<string>skill</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Skills</string>
 			<key>UIApplicationShortcutItemType</key>
@@ -30,7 +30,7 @@
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconFile</key>
-			<string></string>
+			<string>mail</string>
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Contact Me</string>
 			<key>UIApplicationShortcutItemType</key>

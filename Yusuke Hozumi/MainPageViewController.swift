@@ -12,10 +12,12 @@ class MainPageViewController: UIViewController {
     private var scrollView: MainPageScrollView!
     private var animator: UIDynamicAnimator!    
     @IBOutlet weak var labelStackView: UIStackView!
+    private var selectedView: BubbleView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         showBubbleViewAndLabel()
+        self.navigationController?.delegate = self
         self.view.backgroundColor = UIColor.darkBackGroundColor()
     }
 
@@ -33,7 +35,6 @@ class MainPageViewController: UIViewController {
             bubble.alpha = 1.0
         })
     }
-    
     
     func bubbleTapped(tapGesture: UITapGestureRecognizer) {
         UIView.animateWithDuration(1.0, animations: {
@@ -67,7 +68,8 @@ class MainPageViewController: UIViewController {
 }
 
 extension MainPageViewController: BubbleViewDelegate {
-    func bubbleViewPressed(segueIdentifier: String) {
+    func bubbleViewPressed(view: BubbleView, segueIdentifier: String) {
+        selectedView = view
         performSegueWithIdentifier(segueIdentifier, sender: self)
     }
 }
@@ -92,6 +94,21 @@ extension MainPageViewController: UIViewControllerPreviewingDelegate {
             return viewController
         }
         return nil
+    }
+}
+
+extension MainPageViewController: UINavigationControllerDelegate {
+    func navigationController(navigationController: UINavigationController, animationControllerForOperation operation: UINavigationControllerOperation, fromViewController fromVC: UIViewController, toViewController toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        switch operation {
+        case .Pop:
+            return DismissScaleAnimationController()
+        case .Push:
+            let scaleAnimator = ScaleAnimationController()
+            scaleAnimator.originFrame = CGRect(origin: CGPoint(x: selectedView!.frame.origin.x - scrollView.contentOffset.x, y: selectedView!.frame.origin.y), size: selectedView!.frame.size)
+            return scaleAnimator
+        case .None:
+            return nil
+        }
     }
 }
 

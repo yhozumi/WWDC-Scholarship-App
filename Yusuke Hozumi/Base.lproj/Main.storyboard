@@ -183,8 +183,7 @@
         <!--About Me Collection View Controller-->
         <scene sceneID="ywh-57-Mis">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KOr-Bn-sXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <collectionViewController id="XjI-8C-lPx" customClass="AboutMeCollectionViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="About" id="XjI-8C-lPx" customClass="AboutMeCollectionViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="dQl-nU-en7">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -237,10 +236,130 @@
                     </collectionView>
                     <connections>
                         <outlet property="collectionView" destination="dQl-nU-en7" id="NiO-2L-uqy"/>
+                        <segue destination="CCS-eH-Jvz" kind="show" identifier="showHidden" id="d31-dA-yv0"/>
                     </connections>
                 </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KOr-Bn-sXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1923" y="1027"/>
+            <point key="canvasLocation" x="2104" y="981"/>
+        </scene>
+        <!--Kenzie View Controller-->
+        <scene sceneID="BS8-Sk-jzC">
+            <objects>
+                <viewController id="CCS-eH-Jvz" customClass="KenzieViewController" customModule="Yusuke_Hozumi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rHK-xx-72A"/>
+                        <viewControllerLayoutGuide type="bottom" id="lOs-z7-Wew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iBb-M3-LSz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kenzie" translatesAutoresizingMaskIntoConstraints="NO" id="8Jh-Fb-DTe">
+                                <rect key="frame" x="200" y="166" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="AJA-sD-EVq"/>
+                                    <constraint firstAttribute="width" constant="200" id="E10-AJ-KJx"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stk-xW-HoN">
+                                <rect key="frame" x="40" y="409" width="520" height="20.5"/>
+                                <string key="text">I dedicate this View Controller to the person I admire the most, my beutiful other half, Kenzie Stoyle. She sat beside me night after night even if I was frustrated or up late making this application. I have never met anyone so strong and independent but still loving. There's nothing I can do right now to repay you for what you've done for me, what you've given me, but I will spend my whole life giving to you and others the love you've giving me. You're my life and I'm yours. I love you.</string>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Other Passion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z1N-Nt-kOY">
+                                <rect key="frame" x="179" y="104" width="241" height="30"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                <color key="textColor" red="0.85882352939999995" green="0.23529411759999999" blue="0.2470588235" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="vgf-8a-f0c">
+                                <rect key="frame" x="200" y="458" width="169" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="hPe-Hc-dMr">
+                                        <rect key="frame" x="0.0" y="0.0" width="102" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="T" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKh-wt-oA8">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.58823529409999997" green="0.7725490196" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="H" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GU4-Wu-REb">
+                                                <rect key="frame" x="22" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.71372549019999998" green="0.24313725489999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrd-Yi-o2W">
+                                                <rect key="frame" x="43" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.81960784310000001" green="0.5568627451" blue="0.38431372549999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="N" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0R-ei-76i">
+                                                <rect key="frame" x="65" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.85882352939999995" green="0.24313725489999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="K" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qle-qo-qaM">
+                                                <rect key="frame" x="86" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.1058823529" green="0.6705882353" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="wyC-J3-e7g">
+                                        <rect key="frame" x="111" y="0.0" width="59" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R73-Fu-gYx">
+                                                <rect key="frame" x="0.0" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.58823529409999997" green="0.7725490196" blue="0.4549019608" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="O" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gV3-Fw-NhH">
+                                                <rect key="frame" x="22" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.71372549019999998" green="0.24313725489999999" blue="0.59607843140000005" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="U" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsw-PV-kSZ">
+                                                <rect key="frame" x="43" y="0.0" width="16" height="30"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="25"/>
+                                                <color key="textColor" red="0.1058823529" green="0.6705882353" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.16078431369999999" green="0.17254901959999999" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vgf-8a-f0c" firstAttribute="top" secondItem="stk-xW-HoN" secondAttribute="bottom" constant="24" id="1L7-g4-aVP"/>
+                            <constraint firstAttribute="trailing" secondItem="stk-xW-HoN" secondAttribute="trailing" constant="40" id="1Vv-od-6aP"/>
+                            <constraint firstItem="stk-xW-HoN" firstAttribute="top" secondItem="8Jh-Fb-DTe" secondAttribute="bottom" constant="43" id="Axk-mJ-dvI"/>
+                            <constraint firstItem="stk-xW-HoN" firstAttribute="leading" secondItem="iBb-M3-LSz" secondAttribute="leading" constant="40" id="Nm6-Uc-C4o"/>
+                            <constraint firstItem="vgf-8a-f0c" firstAttribute="centerX" secondItem="iBb-M3-LSz" secondAttribute="centerX" id="RbG-Nq-FJB"/>
+                            <constraint firstItem="Z1N-Nt-kOY" firstAttribute="top" secondItem="rHK-xx-72A" secondAttribute="bottom" constant="40" id="fmd-gz-a6r"/>
+                            <constraint firstItem="8Jh-Fb-DTe" firstAttribute="top" secondItem="Z1N-Nt-kOY" secondAttribute="bottom" constant="32" id="hCn-d5-9Rb"/>
+                            <constraint firstItem="Z1N-Nt-kOY" firstAttribute="centerX" secondItem="iBb-M3-LSz" secondAttribute="centerX" id="ofe-40-tmf"/>
+                            <constraint firstItem="8Jh-Fb-DTe" firstAttribute="centerX" secondItem="iBb-M3-LSz" secondAttribute="centerX" id="ow1-Rf-hC5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="kenzieImageView" destination="8Jh-Fb-DTe" id="Ltx-Rv-ucZ"/>
+                        <outlet property="kenzieLabel" destination="stk-xW-HoN" id="Xjg-ac-cXv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V1m-YI-gx4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2983" y="1001"/>
         </scene>
         <!--Contact Me-->
         <scene sceneID="la5-gq-dwe">
@@ -439,6 +558,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="kenzie" width="201" height="200"/>
         <image name="sunglasses" width="150" height="150"/>
     </resources>
 </document>

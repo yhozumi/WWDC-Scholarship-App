@@ -16,10 +16,12 @@ class SkillViewController: UIViewController {
     
     private var views = [SkillsView]()
     
+    private var circleView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let circleView = configureMainCircleView()
-        self.view.addSubview(circleView)
+        circleView = configureMainCircleView()
+        self.view.addSubview(circleView!)
         
         let percentage: CGFloat = CGFloat(Skills.Swift.percentage) / 100
         let barHeight = circleView.frame.height * percentage
@@ -49,6 +51,19 @@ class SkillViewController: UIViewController {
             circleView.addSubview($0) }
     }
     
+    private func configureTapGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SkillViewController.screenTapped(_:)))
+        self.view.addGestureRecognizer(tapGesture)
+    }
+    
+    func screenTapped(gesture: UITapGestureRecognizer) {
+        if !CGRectContainsPoint(circleView!.frame, gesture.locationInView(self.view)) {
+            UIView.animateWithDuration(0.5, animations: {
+                self.descriptionLabel.alpha = 0.0
+                let _ = self.views.map { $0.filterView!.alpha = 0.0 }
+            })
+        }
+    }
     
     private func configureView(skill: Skills, previousView: SkillsView, circleView: UIView) -> SkillsView {
         let percentage: CGFloat = CGFloat(skill.percentage) / 100
@@ -91,7 +106,6 @@ class SkillViewController: UIViewController {
 
 extension SkillViewController: SkillsViewDelegate {
     func skillsViewDidPress(view: SkillsView) {
-        print("\(view.skill?.rawValue) tapped")
         var viewsCopy = views
         UIView.animateWithDuration(0.5, animations: {
             let _ = viewsCopy.map { $0.filterView!.alpha = 0.0 }
@@ -112,6 +126,6 @@ extension SkillViewController: SkillsViewDelegate {
     }
     
     func skillsViewAnimationEnded(view: SkillsView) {
-        print("animation ended")
+        configureTapGesture()
     }
 }

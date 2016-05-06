@@ -74,15 +74,16 @@ class SkillsView: UIView {
             }, completion: { _ in
                 self.delegate?.skillsViewAnimationEnded(self)
                 self.configureFilterView()
+                self.setUpTapGesture()
         })
     }
     
     private func setUpTapGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SkillsView.skillTapped))
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SkillsView.skillTapped(_:)))
         self.addGestureRecognizer(tapGesture)
     }
     
-    func skillTapped() {
+    func skillTapped(tap: UITapGestureRecognizer) {
         self.delegate?.skillsViewDidPress(self)
     }
 }
@@ -90,6 +91,5 @@ class SkillsView: UIView {
 extension SkillsView {
     override func animationDidStop(anim: CAAnimation, finished flag: Bool) {
         configureNameLabel()
-        setUpTapGesture()
     }
 }

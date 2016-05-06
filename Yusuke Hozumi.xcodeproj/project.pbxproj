@@ -34,6 +34,9 @@
 		BADD0B7B1CA96D9F00E8FB83 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */; };
 		BAF0F13C1CCCFF190047A07F /* TimelineEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */; };
 		BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */; };
+		BAF345341CD64C9100AEC0FF /* ScaleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF345331CD64C9100AEC0FF /* ScaleAnimationController.swift */; };
+		BAF345381CD65B0C00AEC0FF /* DismissScaleAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF345371CD65B0C00AEC0FF /* DismissScaleAnimationController.swift */; };
+		BAF3453A1CD67C6400AEC0FF /* KenzieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF345391CD67C6400AEC0FF /* KenzieViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +91,9 @@
 		BADD0B7A1CA96D9F00E8FB83 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
 		BAF0F13B1CCCFF190047A07F /* TimelineEvents.json */ = {isa = PBXFileReference; explicitFileType = text.json; fileEncoding = 4; path = TimelineEvents.json; sourceTree = "<group>"; };
 		BAF0F13D1CCD09530047A07F /* TimelineEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineEvent.swift; sourceTree = "<group>"; };
+		BAF345331CD64C9100AEC0FF /* ScaleAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaleAnimationController.swift; sourceTree = "<group>"; };
+		BAF345371CD65B0C00AEC0FF /* DismissScaleAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DismissScaleAnimationController.swift; sourceTree = "<group>"; };
+		BAF345391CD67C6400AEC0FF /* KenzieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KenzieViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +254,7 @@
 				BA8AA79B1CD1BC7600D103EA /* BlogViewController.swift */,
 				BA8AA79D1CD1BC8300D103EA /* SkillViewController.swift */,
 				BA8AA7B01CD57B7900D103EA /* AboutMeCollectionViewController.swift */,
+				BAF345391CD67C6400AEC0FF /* KenzieViewController.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -255,6 +262,7 @@
 		BADD0B751CA9604600E8FB83 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				BAF345321CD64C5500AEC0FF /* Animation */,
 				BACA4ABA1CA9574900940EBA /* AppDelegate.swift */,
 				BACA4AC11CA9574900940EBA /* Assets.xcassets */,
 				BACA4AC31CA9574900940EBA /* LaunchScreen.storyboard */,
@@ -265,6 +273,15 @@
 				BA8AA7941CCFE1E400D103EA /* UIColor+ColorScheme.swift */,
 			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		BAF345321CD64C5500AEC0FF /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				BAF345331CD64C9100AEC0FF /* ScaleAnimationController.swift */,
+				BAF345371CD65B0C00AEC0FF /* DismissScaleAnimationController.swift */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -401,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BADD0B791CA9611800E8FB83 /* BubbleView.swift in Sources */,
+				BAF345381CD65B0C00AEC0FF /* DismissScaleAnimationController.swift in Sources */,
 				BA8AA7971CD13AFA00D103EA /* ResumeViewController.swift in Sources */,
 				BA8AA79E1CD1BC8300D103EA /* SkillViewController.swift in Sources */,
 				BA8AA7A31CD1BDBF00D103EA /* SafariViewControllerViewable.swift in Sources */,
@@ -409,10 +427,12 @@
 				BA8AA7AA1CD2F30B00D103EA /* Skills.swift in Sources */,
 				BA8AA7B11CD57B7900D103EA /* AboutMeCollectionViewController.swift in Sources */,
 				BA8AA7B31CD57C3800D103EA /* AboutMeCollectionCell.swift in Sources */,
+				BAF3453A1CD67C6400AEC0FF /* KenzieViewController.swift in Sources */,
 				BA8AA7951CCFE1E400D103EA /* UIColor+ColorScheme.swift in Sources */,
 				BAF0F13E1CCD09530047A07F /* TimelineEvent.swift in Sources */,
 				BA02A8451CC9C0E700E19CD9 /* TimelineLayout.swift in Sources */,
 				BA8AA7A51CD1DABD00D103EA /* BubbleData.swift in Sources */,
+				BAF345341CD64C9100AEC0FF /* ScaleAnimationController.swift in Sources */,
 				BA02A8421CC9BF0E00E19CD9 /* TimelineCell.swift in Sources */,
 				BA8AA7A81CD26FFD00D103EA /* SkillsView.swift in Sources */,
 				BA2911041CC3D9F50063FE21 /* UINavigationController+InvisibleNav.swift in Sources */,

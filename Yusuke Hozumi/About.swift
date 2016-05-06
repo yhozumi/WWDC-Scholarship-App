@@ -21,7 +21,7 @@ enum About: String {
         case .Work:
             return "I currently work at an Apple Store as a Genius. I started working at Apple in November 11th, 2011. I started out as a Specialist which later was promoted to Genius position to repair relationships with customers. I love interacting with customers and solving their problems which lead me to realize that I love computer science and it is my passion."
         case .Code:
-            return "Programming is something I'm very passionate about. I spend hours and hours everyday learning and trying new things. Always reading about what kind of programming styles are trending. "
+            return "Programming is my passon. I spend hours and hours everyday learning and trying out new things. Programming on Apple's Eco system is seriously a dream. I love my Apple products and it was life changing to see that I can make something unique and my ideas come to life through a small screen that everyone carries around. Thank you Apple."
         case .Hobby:
             return "On my free time I play my guitar or piano. I find that playing music helps me relax and rethink the code I've written or come up with new ideas."
         }
