@@ -22,34 +22,34 @@ class SkillViewController: UIViewController {
         super.viewDidLoad()
         circleView = configureMainCircleView()
         self.view.addSubview(circleView!)
-        
-        let percentage: CGFloat = CGFloat(Skills.Swift.percentage) / 100
-        let barHeight = circleView.frame.height * percentage
-        let origin = CGPoint(x: circleView.bounds.origin.x, y: circleView.bounds.maxY - barHeight / 2)
-        let size = CGSize(width: circleView.frame.width, height: circleView.frame.height * percentage)
-        
-        let swiftView = SkillsView(frame: CGRect(origin: origin, size: size) , skill: Skills.Swift, backgroundColor: Skills.Swift.color)
-        views.append(swiftView)
-        
-        let objectiveC = configureSkillView(Skills.ObjectiveC, previousView: swiftView, circleView: circleView)
-        views.append(objectiveC)
-        
-        let cSharp = configureSkillView(Skills.CSharp, previousView: objectiveC, circleView: circleView)
-        views.append(cSharp)
-        
-        let cPlusPlus = configureSkillView(Skills.CPlusPlus, previousView: cSharp, circleView: circleView)
-        views.append(cPlusPlus)
-        
-        let python = configureView(Skills.Python, previousView: cPlusPlus, circleView: circleView)
-        views.append(python)
-        
-        let javaScript = configureView(Skills.Javascript, previousView: python, circleView: circleView)
-        views.append(javaScript)
-    
+
+        configureMultipleSkillViews()
         let _ = views.map {
             $0.delegate = self
             circleView.addSubview($0) }
     }
+    
+    private func configureMultipleSkillViews() {
+        var previousView: SkillsView?
+        for skill in skills {
+            switch skill {
+            case .Swift:
+                let percentage: CGFloat = CGFloat(Skills.Swift.percentage) / 100
+                let barHeight = circleView.frame.height * percentage
+                let origin = CGPoint(x: circleView.bounds.origin.x, y: circleView.bounds.maxY - barHeight / 2)
+                let size = CGSize(width: circleView.frame.width, height: circleView.frame.height * percentage)
+                
+                let swiftView = SkillsView(frame: CGRect(origin: origin, size: size), skill: skill, backgroundColor: skill.color)
+                views.append(swiftView)
+                previousView = swiftView
+            default:
+                let skillView = configureSkillView(skill, previousView: previousView!, circleView: self.circleView)
+                previousView = skillView
+                views.append(skillView)
+            }
+        }
+    }
+
     
     private func configureTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(SkillViewController.screenTapped(_:)))
@@ -65,24 +65,13 @@ class SkillViewController: UIViewController {
         }
     }
     
-    private func configureView(skill: Skills, previousView: SkillsView, circleView: UIView) -> SkillsView {
+    private func configureSkillView(skill: Skills, previousView: SkillsView, circleView: UIView) -> SkillsView {
         let percentage: CGFloat = CGFloat(skill.percentage) / 100
         let barHeight = circleView.frame.height * percentage
         let size = CGSize(width: circleView.frame.width, height: barHeight)
         let origin = CGPoint(x: circleView.bounds.origin.x, y: (previousView.frame.minY - barHeight / 2) - previousView.bounds.height / 2)
         
         print("bar Height in configureView \(barHeight); previousViewBounds \(previousView.bounds.height)")
-        
-        return SkillsView(frame: CGRect(origin: origin, size: size), skill: skill, backgroundColor: skill.color)
-    }
-    
-    private func configureSkillView(skill: Skills, previousView: SkillsView, circleView: UIView) -> SkillsView {
-        let percentage: CGFloat = CGFloat(skill.percentage) / 100
-        let barHeight = circleView.frame.height * percentage
-        let size = CGSize(width: circleView.frame.width, height: barHeight)
-        let origin = CGPoint(x: circleView.bounds.origin.x, y: (previousView.frame.minY - barHeight) - barHeight / 2 )
-        
-        print("bar Height in skillsView \(barHeight); previousViewBounds \(previousView.bounds.height)")
         
         return SkillsView(frame: CGRect(origin: origin, size: size), skill: skill, backgroundColor: skill.color)
     }

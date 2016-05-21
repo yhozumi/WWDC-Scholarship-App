@@ -43,7 +43,7 @@ class ContactViewController: UIViewController {
     }
 
     @IBAction func emailButtonPressed(sender: AnyObject) {
-        guard MFMailComposeViewController.canSendMail() else { displayErrorMessage(); return  }
+        guard MFMailComposeViewController.canSendMail() else { displayErrorMessage(); return }
     
         configureMailComposeViewController("yusuke.hozumi@icloud.com")
         

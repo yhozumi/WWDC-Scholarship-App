@@ -34,7 +34,7 @@ enum Skills: String {
     }
     
     var percentage: Int {
-        switch  self {
+        switch self {
         case .Swift: return 40
         case .ObjectiveC: return 20
         case .CSharp: return 10
@@ -58,8 +58,8 @@ enum Skills: String {
     static func arrayOfSkills() -> [Skills] {
         return [
             Skills.Swift,
-            Skills.CSharp,
             Skills.ObjectiveC,
+            Skills.CSharp,
             Skills.CPlusPlus,
             Skills.Python,
             Skills.Javascript
