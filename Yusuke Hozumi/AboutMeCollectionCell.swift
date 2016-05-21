@@ -26,6 +26,14 @@ class AboutMeCollectionCell: UICollectionViewCell {
         }
     }
     
+    override func prepareForReuse() {
+        guard let blurEffectView = blurEffectView else { return }
+        if blurEffectView.alpha == 1.0 {
+            blurEffectView.alpha = 0.0
+            descriptionLabel.alpha = 0.0
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -65,9 +73,7 @@ class AboutMeCollectionCell: UICollectionViewCell {
                     self.blurEffectView!.alpha = 0.0
                     self.descriptionLabel.alpha = 0.0
                 }
-                }, completion: nil)
+            }, completion: nil)
         }
     }
-
-    
 }
