@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 class KenzieViewController: UIViewController {
     @IBOutlet weak var kenzieImageView: UIImageView!
@@ -14,13 +15,21 @@ class KenzieViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        self.kenzieImageView.layer.cornerRadius = self.kenzieImageView.bounds.width / 2
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        animateImageView(kenzieImageView)
+    }
+    
+    private func animateImageView(image: UIImageView) {
+        let dropAnimation = CABasicAnimation(keyPath: "center.y")
+        dropAnimation.duration = 0.5
+        dropAnimation.fromValue = self.view.frame.height / 2
+        dropAnimation.toValue = image.center.y
+        
+        image.layer.addAnimation(dropAnimation, forKey: "dropAnimation")
     }
     
     
