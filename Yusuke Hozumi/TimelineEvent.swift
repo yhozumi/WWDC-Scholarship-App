@@ -24,8 +24,23 @@ struct TimelineEvent {
     private(set) var image: String
     private let jsonArray: [AnyObject] = []
     
-    private func parseJSON() {
+    static func parseJSON(data: NSData) -> [TimelineEvent]? {
+        var events = [TimelineEvent]()
         
+        do {
+            let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as! NSArray
+            for i in 0..<json.count {
+                guard let jsonDict = json[i] as? [String: AnyObject] else { return nil }
+                do {
+                    events.append(try TimelineEvent(json: jsonDict))
+                } catch {
+                    print(error)
+                }
+            }
+        } catch {
+            print("\(error)")
+        }
+        return events
     }
     
     init(json: [String: AnyObject]) throws {

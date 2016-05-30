@@ -28,24 +28,8 @@ class TimelineCollectionViewController: UICollectionViewController {
     
     private func parseJSON() {
         guard let jsonDataPath = NSBundle.mainBundle().pathForResource("TimelineEvents", ofType: "json") else { return }
-        guard let jsonData = NSData(contentsOfFile: jsonDataPath) else { print("bad data");return }
-        
-        do {
-            let json = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .AllowFragments) as! NSArray
-           
-            for i in 0..<json.count {
-                guard let jsonDict = json[i] as? [String: AnyObject] else { return }
-                do {
-                    events.append(try TimelineEvent(json: jsonDict))
-                } catch {
-                    print(error)
-                }
-            }
-            print(events.count)
-            
-        } catch {
-            print("\(error)")
-        }
+        guard let jsonData = NSData(contentsOfFile: jsonDataPath) else { print("bad data"); return }
+        events = TimelineEvent.parseJSON(jsonData)!
     }
 }
 
