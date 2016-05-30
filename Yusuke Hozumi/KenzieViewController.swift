@@ -16,11 +16,17 @@ class KenzieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.kenzieImageView.layer.cornerRadius = self.kenzieImageView.bounds.width / 2
+        self.kenzieImageView.clipsToBounds = true
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         animateImageView(kenzieImageView)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        self.kenzieImageView.center.y = self.view.frame.height / 2
     }
     
     private func animateImageView(image: UIImageView) {
@@ -31,6 +37,4 @@ class KenzieViewController: UIViewController {
         
         image.layer.addAnimation(dropAnimation, forKey: "dropAnimation")
     }
-    
-    
 }
